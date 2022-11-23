@@ -1,0 +1,35 @@
+
+
+.midsection h1
+{
+    font-size: 50px;
+    font-family:Goudy Old Style;
+    color: #b30000;
+    margin-left: 100px;
+    padding-top: 50px;
+}
+.midsection  #p1
+{
+    font-family: monospace;
+    font-size: 27px;
+    font-weight: lighter;
+    margin-left: 100px;
+    padding-top: 30px;
+ 
+}
+.midsection #p2
+{
+    font-family: Goudy Old Style;
+    font-size: 27px ;
+    color: #b30000;
+    font-weight: bold;
+    margin-left: 100px;
+    padding-top: 20px;
+}
+.midsection #p3
+{
+    font-family: Goudy Old Style;
+    font-size: 29px;
+    margin-left: 100px;
+    padding-top: 20px;
+}
