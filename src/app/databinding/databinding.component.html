@@ -9,5 +9,5 @@
     
 </li>
 <li> <p>User Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{userName}}</p></li>
-<li><button (click)="onCliskUser()">Clear</button></li>
+<li><button [disabled]=" !userName" (click)="onCliskUser()">Clear</button></li>
 </ol>

@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DatabindingComponent implements OnInit {
   userName:string=" ";
+  buttonDisable=true;
   onCliskUser(){
      this.userName=" ";
   }
+  
   constructor() { }
 
   ngOnInit() {
