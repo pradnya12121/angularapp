@@ -1,0 +1,44 @@
+<!-- <p *ngIf="isShow"> structural-directives works!</p> -->
+<br>
+<div class="first">
+    
+<h3>*ngIf Example:</h3>
+
+<hr>
+&nbsp;&nbsp;&nbsp;<input  type="checkbox" [(ngModel)]="show">
+ <!-- {{show}}  -->
+<label id="lab"> Angular 8</label>
+<!-- {{show}} -->
+
+ <div id="para" *ngIf="show">Angular 8 is an open-source, client-side TypeScript based JavaScript framework. It is written in TypeScript and complied into JavaScript. Angular 8 is used to create dynamic web applications. It is very similar to its previous versions except having some extensive features.</div>
+ </div> 
+ <br>
+ 
+ <div class="main">
+    <h3>*ngFor Example:</h3>
+    <hr>
+ <div>
+    <div id="t1">{{title}}</div>
+ </div>
+ <div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Course Name</th>
+                <th>Syllabus</th>
+                <th>Fees</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cor of  course">
+            <td>{{cor.Id}}</td>
+            <td>{{cor.CourseName}}</td>
+            <td>{{cor.Syllabus}}</td>
+            <td>{{cor.Fees}}</td>
+        </tr>
+        </tbody>
+    </table>
+ </div>
+ </div>

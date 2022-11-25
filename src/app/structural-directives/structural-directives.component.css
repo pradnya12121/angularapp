@@ -1,0 +1,52 @@
+#lab{
+    font-weight: bold;
+}
+.tab th,tr,td{
+border: 2px solid black;
+border: 20px;
+padding-left: 10px;
+margin-right: 30px;
+}
+#t1{
+    font-size: 22px;
+    font-weight: bold;
+     text-align: center; 
+     padding-bottom: 10px;
+}
+.main{
+     border: 2px solid black; 
+    width: 50%;
+    border-radius: 25px;
+    height: 280px;
+    /* padding-left: 10px; */
+    margin-left: 70px;
+    /* padding-bottom: 4px; */
+    background-image: url(/assets/image3.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+.first{
+    width: 50%;
+    height: 200px;
+    margin-left: 70px;
+    /* padding-left: 10px; */
+    border: 2px solid black;
+    border-radius: 25px;
+    font-size: large;
+    background-image: url(/assets/images.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+
+}
+#para{
+    padding-left: 12px;
+}
+.table th{
+    font-size: 20px;
+}
+.table td{
+    font-size: 18px;
+}

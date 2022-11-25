@@ -1,0 +1,15 @@
+.switchMain{
+    width: 50%;
+    height: 200px;
+    margin-left: 70px;
+    /* padding-left: 10px; */
+    border: 2px solid black;
+    border-radius: 25px;
+    font-size: large;
+    background-image: url(/assets/image4.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.col-md-12{
+    color: black;
+}

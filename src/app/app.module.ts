@@ -12,6 +12,10 @@ import { WarningAlert } from './WarningAlert/warnning.component';
 import { SucessComponent } from './sucess/sucess.component';
 import { ServerComponent } from './server/server.component';
 import { DatabindingComponent } from './databinding/databinding.component';
+import { DemodirectivesComponent } from './demodirectives/demodirectives.component';
+import { NgswitchComponent } from './ngswitch/ngswitch.component';
+import { StructuralDirectivesComponent } from './structural-directives/structural-directives.component';
+import { NgSwitch2Component } from './ng-switch2/ng-switch2.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +28,10 @@ import { DatabindingComponent } from './databinding/databinding.component';
     SucessComponent,
     ServerComponent,
     DatabindingComponent,
+    DemodirectivesComponent,
+    NgswitchComponent,
+    StructuralDirectivesComponent,
+    NgSwitch2Component,
     // ServerComponent
   ],
   imports: [

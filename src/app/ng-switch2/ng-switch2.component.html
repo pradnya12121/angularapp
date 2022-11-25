@@ -1,0 +1,30 @@
+
+ <div class="switchMain">
+    <h3>*ngSwitch Example:</h3>
+    <hr> 
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <select class="form-controls" (change)="getProductValue($event)">
+                <option value="Default">Select Product</option>
+                <option value="Mechanical">Mechanical</option>
+                <option value="Civil Engineering">Civil Engineering</option>
+                <!-- <option value="Electronic & Telecomunication">Electronic & telecomunication</option> -->
+                <!-- <option value="Mechanical">Mechanical</option> -->
+                <option value="Information Technology">Information Technology</option>
+            </select>
+
+
+            
+
+            <div class="col-md-12" [ngSwitch]="selectedProduct">
+            <h2 class="text-success" *ngSwitchDefault>Please select field</h2>
+            <h2 class="text-success" *ngSwitchCase="'Mechanical'">Mechanical</h2>
+            <h2 class="text-success" *ngSwitchCase="'Civil Engineering'">Civil Engineering</h2>
+            <!-- <h2 class="text-success" *ngSwitchCase="'Electronics & Telecomunication'">Electronics & Telecomunication</h2> -->
+            <h2 class="text-success" *ngSwitchCase="'Information Technology'">Information Technology</h2>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
