@@ -1,0 +1,46 @@
+
+
+<div class="main">
+    <h3>Custom Directive:</h3>
+    <hr>
+<div class="container">
+    <div class="row">
+    <div class="col-md-4 offset-md-4">
+    <form [formGroup]="registerForm" (ngSubmit)="signup();">
+    <div class="formbox">
+  
+    <div class="form-group">
+    
+    Enter Password:    <input type="password" formControlName="password" class="form-control" placeholder="Password" [ngClass]="{ 'is-invalid': submitted && fval.password.errors}" />
+     <div *ngIf="submitted && fval.password.errors"class="invalid-feedback">
+    <div ngClass="fval.password.errors.required">
+    Password is required.
+    </div>
+    <div *ngIf="fval.password.errors.minlength">Password must be at least 6 characters</div>
+    </div>
+</div> 
+
+<br>
+
+    <div class="form-group"> Confirm Password:
+    <input type="password" formControlName="confirmPassword" class="form-control" placeholder="Confirm Password"[ngClass]="{ 'is-invalid': submitted && fval.confirmPassword.errors }" appConfirmEqualValidator='password'/>
+    <div *ngIf="submitted && fval.confirmPassword.errors" class="invalid-feedback">
+    <div *ngIf="fval.confirmPassword.errors.required"
+    >Confirm password is required</div>
+    <div *ngIf="fval.confirmPassword.errors?.notEqual">Password Mismatch</div>
+    </div>
+     
+    </div>
+  
+     <br>
+    <div class="form-group">
+    <button type="submit" class="btn btn-primary signin">Sign Up <span class="arrowbtn"><span
+    class="fa fa-arrow-right"></span></span></button>
+    </div>
+    </div>
+    </form>
+    </div>
+    </div>
+    </div>
+
+</div>

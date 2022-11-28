@@ -16,4 +16,5 @@ export class NgSwitch2Component implements OnInit {
     this.selectedProduct=value.target.value
   }
 
+
 }
