@@ -1,0 +1,14 @@
+.card-header{
+    background-color: black; 
+    color: white;
+}
+.card-body{
+    background-color: gray;
+    font-size: 20px;
+}
+.card{
+    margin-left: 390px;
+}
+.table table-striped{
+    background-color: black;
+}

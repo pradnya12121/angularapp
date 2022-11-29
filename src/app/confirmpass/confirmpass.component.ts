@@ -14,9 +14,7 @@ export class ConfirmpassComponent implements OnInit {
   ngOnInit() {
 
     this.registerForm = this.formBuilder.group({
-      // fullName: ['', Validators.required],
-      // email: ['', [Validators.required,Validators.email]],
-      // phone: ['', Validators.required],
+      
       password: ['', [Validators.required,Validators.minLength(6)]],
       confirmPassword: ['', Validators.required],
       tnc: ['', Validators.required]

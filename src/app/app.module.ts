@@ -20,6 +20,7 @@ import { AttriComponent } from './attri/attri.component';
 import { CustomDirDirective } from './custom-dir.directive';
 import { ConfirmpassComponent } from './confirmpass/confirmpass.component';
 import { ConfirmEqualValidatorDirective } from './passd.directive';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,11 @@ import { ConfirmEqualValidatorDirective } from './passd.directive';
     CustomDirDirective,
     ConfirmpassComponent,
   
-    ConfirmEqualValidatorDirective
+    ConfirmEqualValidatorDirective,
+  
+    
+  
+    ChildComponent
     // ServerComponent
   ],
   imports: [

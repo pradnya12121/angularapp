@@ -8,6 +8,7 @@ import { Builder } from 'protractor';
 })
 export class AttriComponent implements OnInit {
   colorVal='red';
+  uname:string;
   constructor() { }
 
   ngOnInit() {
@@ -34,6 +35,9 @@ export class AttriComponent implements OnInit {
       "country": "USA"
     }
   ]
+  show(value){
+this.uname=value;
+  }
 
 
 }
