@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Movie } from '../models/movies';
 
 @Component({
@@ -8,6 +8,13 @@ import { Movie } from '../models/movies';
 })
 export class DemodirectivesComponent implements OnInit {
 isShow:boolean=true;
+ @Output() foodevent:EventEmitter<string> =new EventEmitter<string>();
+
+
+addtofood(value) {
+// foodevent is nothing but your custom event (foodevent)
+    this.foodevent.emit(value);
+  }
 
 
 title : string = "Top 3 Movies";

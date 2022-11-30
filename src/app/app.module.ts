@@ -21,6 +21,7 @@ import { CustomDirDirective } from './custom-dir.directive';
 import { ConfirmpassComponent } from './confirmpass/confirmpass.component';
 import { ConfirmEqualValidatorDirective } from './passd.directive';
 import { ChildComponent } from './child/child.component';
+import { ChildoutComponent } from './childout/childout.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,11 @@ import { ChildComponent } from './child/child.component';
   
     
   
-    ChildComponent
+    ChildComponent,
+  
+    
+  
+    ChildoutComponent
     // ServerComponent
   ],
   imports: [

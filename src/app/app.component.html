@@ -41,5 +41,42 @@
     <!-- <app-server></app-server> -->
 <br>
 <br>
+<ul *ngFor="let f of foods">
+  <li>{{f}}</li>
+</ul>
   
-<app-child [employee_new_one]="employees_one"></app-child>
+
+
+<!-- <app-child [employee_new_one]="employees_one"></app-child> -->
+
+
+<app-childout (collegeDetail)="getDataFromChildO($event)"></app-childout>
+<br>
+<br>
+<div>
+  <table class="table table-striped table-dark">
+    <thead>
+      <tr>
+        <th>College Code</th>
+        <th>College Name</th>
+        <th>College Address</th>
+        <th>College Intake</th>
+        <th>College Grade</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of collegep" >
+    
+      <td>{{c.college_code}}</td>
+      <td>{{c.college_name}}</td>
+      <td>{{c.college_address}}</td>
+      <td>{{c.college_intake}}</td>
+      <td>{{c.college_grade}}</td> 
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!--     
+    <app-demodirectives (foodevent)="getDataFromChild($event)"></app-demodirectives>  -->
+   
+    
