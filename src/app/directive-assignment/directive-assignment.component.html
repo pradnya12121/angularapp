@@ -1,0 +1,7 @@
+<p>directive-assignment works!</p>
+<button class="btn btn-secondary" (click)="toggleTag()" >Display Details</button>
+{{count}}
+<h2 *ngIf="showMe">Angular 8 is an open-source, client-side TypeScript based JavaScript framework. It is written in TypeScript and complied into JavaScript</h2>
+<ul *ngFor="let e of array">
+    <li *ngIf="e>=5"  [ngStyle]="{'background-color': 'blue','color':'white'}">{{e}}</li>
+</ul> 

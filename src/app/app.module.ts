@@ -25,6 +25,7 @@ import { ChildoutComponent } from './childout/childout.component';
 import { HooksComponent } from './hooks/hooks.component';
 import { ParentcomponentComponent } from './parentcomponent/parentcomponent.component';
 import { ChildcomponentComponent } from './childcomponent/childcomponent.component';
+import { DirectiveAssignmentComponent } from './directive-assignment/directive-assignment.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +66,11 @@ import { ChildcomponentComponent } from './childcomponent/childcomponent.compone
   
     
   
-    ChildcomponentComponent
+    ChildcomponentComponent,
+  
+    
+  
+    DirectiveAssignmentComponent
     // ServerComponent
   ],
   imports: [
