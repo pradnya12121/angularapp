@@ -9,6 +9,7 @@ import { Employee } from './models/employee';
 export class AppComponent {
   // title = 'angularapp';
   // username='this is from parent';
+  uid:number;
 
   foods: string[] = [];
   collegep:any[]=[];

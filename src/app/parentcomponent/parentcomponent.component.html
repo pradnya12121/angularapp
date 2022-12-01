@@ -1,0 +1,59 @@
+
+<div class="card">
+    <h3 class="card-header">@input ngOnChanges Assignment</h3>
+<table class="table">
+    <tbody>
+    <tr>
+<td>Employee ID: </td> <td>
+    <input class="form-control" type="number" #item1 [(ngModel)]="eid"><br></td>
+
+</tr>
+<tr>
+  <td>Employee Name : </td>
+   <td><input  class="form-control" type="text" #item2 [(ngModel)]="ename"></td> 
+  
+</tr>
+<tr>
+ <td> Employee Dept :  </td> 
+  <td><input  class="form-control" type="text" #item3 [(ngModel)]="edept"></td>
+</tr>
+<tr>
+<td>Employee Salary: </td>  
+  <td> <input  class="form-control" type="number" #item4 [(ngModel)]="esalary"></td>
+</tr>
+<tr>
+<td>Employee Company:  </td>
+    <td><input  class="form-control" type="text" #item5 [(ngModel)]="ecompany"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<button class="btn btn-dark" (click)="addData(item1.value,item2.value,item3.value,item4.value,item5.value)" #item1,#item2,#item3,#item4,#item5> Show Employee Data</button>
+
+<br>
+<br>
+<div>
+    <table class="table table-striped table-dark">
+        <thead>
+            <tr>
+                <th>Employee ID</th>
+                <th>Employee Name</th>
+                <th>Employee Department</th>
+                <th>Employee Salary</th>
+                <th>Employee Company</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let e of employeeDetails">
+                <td>{{e.eid}}</td>
+                <td>{{e.ename}}</td>
+                <td>{{e.edept}}</td>
+                <td>{{e.esalary}}</td>
+                <td>{{e.ecompany}}</td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
+<app-childcomponent [employee]="employeeDetails"></app-childcomponent>

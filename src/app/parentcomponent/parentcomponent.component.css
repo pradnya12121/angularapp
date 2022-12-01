@@ -1,0 +1,17 @@
+.card-header{
+    background-color: rgb(102, 98, 98);
+    color: white;
+}
+.table{
+    background-image: url(/assets/images/employee2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.table td {
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+.btn {
+ border-radius: 20px;
+}

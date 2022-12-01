@@ -22,6 +22,9 @@ import { ConfirmpassComponent } from './confirmpass/confirmpass.component';
 import { ConfirmEqualValidatorDirective } from './passd.directive';
 import { ChildComponent } from './child/child.component';
 import { ChildoutComponent } from './childout/childout.component';
+import { HooksComponent } from './hooks/hooks.component';
+import { ParentcomponentComponent } from './parentcomponent/parentcomponent.component';
+import { ChildcomponentComponent } from './childcomponent/childcomponent.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +53,19 @@ import { ChildoutComponent } from './childout/childout.component';
   
     
   
-    ChildoutComponent
+    ChildoutComponent,
+  
+    
+  
+    HooksComponent,
+  
+    
+  
+    ParentcomponentComponent,
+  
+    
+  
+    ChildcomponentComponent
     // ServerComponent
   ],
   imports: [

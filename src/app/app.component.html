@@ -39,7 +39,7 @@
   <!-- <h1> -->
     <!-- Welcome to {{ title }}! -->
     <!-- <app-server></app-server> -->
-<br>
+<!-- <br>
 <br>
 <ul *ngFor="let f of foods">
   <li>{{f}}</li>
@@ -50,7 +50,7 @@
 <!-- <app-child [employee_new_one]="employees_one"></app-child> -->
 
 
-<app-childout (collegeDetail)="getDataFromChildO($event)"></app-childout>
+<!-- <app-childout (collegeDetail)="getDataFromChildO($event)"></app-childout>
 <br>
 <br>
 <div>
@@ -75,8 +75,15 @@
       </tr>
     </tbody>
   </table>
-</div>
+</div> --> -->
 <!--     
+  
     <app-demodirectives (foodevent)="getDataFromChild($event)"></app-demodirectives>  -->
-   
-    
+    <select (change)="uid=sid.value" #sid>
+      <option selected disabled>No value Selected</option>
+      <option [value] ="id" *ngFor=" let id of [1,2,3,4]">
+        {{id}}
+      </option>
+    </select>
+   <app-hooks [userid]="uid"></app-hooks>
+    <app-parentcomponent></app-parentcomponent>
