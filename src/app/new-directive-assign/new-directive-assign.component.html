@@ -1,0 +1,18 @@
+<p>new-directive-assign works!</p>
+<div class="card">
+<h3 class="card-header"> Add Vegetables </h3>
+<br>
+<br>
+<input  class="form-control" type="text" #item [(ngModel)]="name"> &nbsp;&nbsp;<button class="btn btn-secondary" (click)="addData(item.value)">Add</button>
+<!-- {{name}} -->
+</div>
+
+<table class="table table-striped table-dark">
+    <tbody>
+    <tr *ngFor="let n of arr; let i=index">
+        <!-- {{i}} -->
+    <td>{{n.name}}</td>
+    <td><button   class="btn btn-danger "(click)="removeRow(item.value)">Remove</button></td>
+    </tr>
+    </tbody>
+</table>

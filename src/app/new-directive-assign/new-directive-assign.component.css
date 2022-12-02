@@ -1,0 +1,26 @@
+.form-control{
+    width: 100px;
+}
+ .table-striped tr td {
+ color:white;
+ font-size: 20px;
+ }
+ .btn {
+    width: 70px;
+    text-align: center;
+    margin-left: 100px;
+    padding-bottom:10px ;
+ }
+ .card-header{
+    background-color: black;
+    color:white;
+ }
+ .card{
+    background-color: gray;
+ }
+ .form-control{
+    width: 300px;
+    font-weight: bold;
+    /* text-align: center; */
+ }
+ 
