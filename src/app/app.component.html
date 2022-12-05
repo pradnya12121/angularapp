@@ -85,8 +85,14 @@
         {{id}}
       </option>
     </select>
-   <!-- <app-hooks [userid]="uid"></app-hooks>
+   <app-hooks [userid]="uid" [parentData]="data" [product]="prodct"></app-hooks>
     <app-parentcomponent></app-parentcomponent>
     <app-directive-assignment></app-directive-assignment> -->
     <app-new-directive-assign></app-new-directive-assign>
     <app-p></app-p>
+    <input type="text" (blur)="handleData($event)">
+
+   Enter Product Name: <input type="text" [(ngModel)]="name">
+   
+   Enter Product Price: <input type="text" [(ngModel)]="price">
+   <button (click)="updateProduct()">Update Product</button>

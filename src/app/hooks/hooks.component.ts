@@ -7,8 +7,12 @@ import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/cor
 })
 export class HooksComponent implements OnInit ,OnChanges {
 @Input() userid:number;
+@Input() parentData;string;
+@Input() product:object;
+
   constructor() { }
   ngOnChanges(changes: SimpleChanges): void {
+    console.log(this.parentData)
   for(const propName in changes){
      const prop=changes[propName];
      const {previousValue,currentValue,firstChange}=prop;

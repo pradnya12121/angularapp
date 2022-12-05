@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Employee } from './models/employee';
+import { Product } from './models/product';
 
 @Component({
   selector: 'app-root',
@@ -10,10 +11,12 @@ export class AppComponent {
   // title = 'angularapp';
   // username='this is from parent';
   uid:number;
-
+data;
+name:string;
+price:number;
   foods: string[] = [];
   collegep:any[]=[];
-
+product:Product=new Product();
   constructor(){
     // this.employees.emp_id=101;
     // this.employees.emp_name="Pranisha Babar";
@@ -44,6 +47,13 @@ getDataFromChildO(value){
   console.log(value)
   this.collegep=value;
 
+}
+handleData(value){
+this.data=value.target.value;
+}
+updateProduct(){
+  this.product.name=this.name;
+  this.product.price=this.price
 }
 
 
