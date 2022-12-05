@@ -6,17 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./directive-assignment.component.css']
 })
 export class DirectiveAssignmentComponent implements OnInit {
-  showMe:boolean=true;
-  array:number[]=[];
-  count=0;
+  show:boolean=true;
+ arr:any[]=[];
   constructor() { }
-  toggleTag(){
-    this.showMe=!this.showMe;
-    this.count=this.count+1;
-    this.array.push(this.count)
   
-  } 
   ngOnInit() {
+  }
+  toggleMe(){
+    this.show=!this.show
+    this.arr.push(this.arr.length+1)
   }
 
 }
