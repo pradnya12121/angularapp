@@ -50,6 +50,7 @@ getDataFromChildO(value){
 }
 handleData(value){
 this.data=value.target.value;
+console.log(this.data)
 }
 updateProduct(){
   this.product.name=this.name;

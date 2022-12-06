@@ -2,8 +2,7 @@
 <button (click)="toggleMe()">Display Details</button>
 <p *ngIf="show">Angular is Component base frame work</p>
 <div *ngFor="let m of arr"  
-[ngStyle]="{'backgroundColor:' m>=5? 'blue' : 'transparent'}"
-[ngClass]="{'white:' m>=5}"
->
+[ngStyle]="{'backgroundColor': m>=5? 'blue' : 'transparent'}"
+[ngClass]="{'white': m>=5}">
     {{m}}
 </div>

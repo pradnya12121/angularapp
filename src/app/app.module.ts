@@ -27,8 +27,6 @@ import { ParentcomponentComponent } from './parentcomponent/parentcomponent.comp
 import { ChildcomponentComponent } from './childcomponent/childcomponent.component';
 import { DirectiveAssignmentComponent } from './directive-assignment/directive-assignment.component';
 import { NewDirectiveAssignComponent } from './new-directive-assign/new-directive-assign.component';
-import { PComponent } from './p/p.component';
-import { CComponent } from './c/c.component';
 
 @NgModule({
   declarations: [
@@ -81,11 +79,10 @@ import { CComponent } from './c/c.component';
   
     
   
-    PComponent,
+  
   
     
   
-    CComponent
     // ServerComponent
   ],
   imports: [

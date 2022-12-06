@@ -85,11 +85,19 @@
         {{id}}
       </option>
     </select>
-   <app-hooks [userid]="uid" [parentData]="data" [product]="prodct"></app-hooks>
+   <!-- <app-hooks [userid]="uid" [parentData]="data" [product]="prodct">
+    <h1>This is childe content coming from Parent</h1>
+   </app-hooks> -->
     <app-parentcomponent></app-parentcomponent>
     <app-directive-assignment></app-directive-assignment> -->
-    <app-new-directive-assign></app-new-directive-assign>
-    <app-p></app-p>
+    <!-- <app-new-directive-assign></app-new-directive-assign>
+     <h1 #child>This is child content coming from parent component</h1> -->
+<app-hooks [userid]="uid" [parentData]="data" [product]="product">
+  <h1 #child>This is child content coming from parent component</h1> 
+  
+
+</app-hooks>
+
     <input type="text" (blur)="handleData($event)">
 
    Enter Product Name: <input type="text" [(ngModel)]="name">
