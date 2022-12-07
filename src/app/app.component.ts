@@ -17,6 +17,7 @@ price:number;
   foods: string[] = [];
   collegep:any[]=[];
 product:Product=new Product();
+isShow:boolean=true;
   constructor(){
     // this.employees.emp_id=101;
     // this.employees.emp_name="Pranisha Babar";
@@ -55,6 +56,9 @@ console.log(this.data)
 updateProduct(){
   this.product.name=this.name;
   this.product.price=this.price
+}
+destroy(){
+  this.isShow=false;
 }
 
 

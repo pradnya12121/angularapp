@@ -92,15 +92,19 @@
     <app-directive-assignment></app-directive-assignment> -->
     <!-- <app-new-directive-assign></app-new-directive-assign>
      <h1 #child>This is child content coming from parent component</h1> -->
-<app-hooks [userid]="uid" [parentData]="data" [product]="product">
+<app-hooks *ngIf="isShow" [userid]="uid" [parentData]="data" [product]="product">
   <h1 #child>This is child content coming from parent component</h1> 
+ 
   
 
 </app-hooks>
+<button (click)="destroy()">Destory</button>
+<br>
 
-    <input type="text" (blur)="handleData($event)">
+    <input type="text" (blur)="handleData($event)"><br>
 
-   Enter Product Name: <input type="text" [(ngModel)]="name">
+   Enter Product Name: <input type="text" [(ngModel)]="name"><br>
    
-   Enter Product Price: <input type="text" [(ngModel)]="price">
+   Enter Product Price: <input type="text" [(ngModel)]="price"><br>
+   
    <button (click)="updateProduct()">Update Product</button>

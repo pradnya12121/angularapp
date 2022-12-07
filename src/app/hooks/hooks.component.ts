@@ -1,18 +1,24 @@
-import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, ContentChild, DoCheck, ElementRef, Input, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
+import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, ContentChild, DoCheck, ElementRef, Input, OnChanges, OnDestroy, OnInit, SimpleChanges, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-hooks',
   templateUrl: './hooks.component.html',
   styleUrls: ['./hooks.component.css']
 })
-export class HooksComponent implements OnInit ,OnChanges,DoCheck,AfterContentInit,AfterContentChecked ,AfterViewInit,AfterViewChecked{
+export class HooksComponent implements OnInit ,OnChanges,DoCheck,AfterContentInit,AfterContentChecked ,AfterViewInit,AfterViewChecked, OnDestroy{
 @Input() userid:number;
 @Input() parentData:string;
 @Input() product:object;
 @ContentChild("child", {static:false}) contentChild:ElementRef;
 @ViewChild("childhook", {static:false}) viewChild:ElementRef;
-
+ counter;
+ num:number=1;
   constructor() { }
+  ngOnDestroy(): void {
+    console.log("ng Destroy")
+    clearInterval(this.counter)
+   
+  }
   ngAfterViewChecked(): void {
     console.log("ngAfterViewChecked()")
     this.viewChild.nativeElement.setAttribute('style' , `color: ${this.parentData}`)
@@ -48,6 +54,10 @@ export class HooksComponent implements OnInit ,OnChanges,DoCheck,AfterContentIni
 
   ngOnInit() {
     console.log("ngOnIt call")
+    this.counter=setInterval(()=>{
+      this.num=this.num+1;
+      console.log(this.num)
+    },1000)
   }
 
 }
