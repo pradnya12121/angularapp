@@ -16,7 +16,7 @@ export class HooksComponent implements OnInit ,OnChanges,DoCheck,AfterContentIni
   constructor() { }
   ngOnDestroy(): void {
     console.log("ng Destroy")
-    clearInterval(this.counter)
+    // clearInterval(this.counter)
    
   }
   ngAfterViewChecked(): void {
@@ -54,10 +54,10 @@ export class HooksComponent implements OnInit ,OnChanges,DoCheck,AfterContentIni
 
   ngOnInit() {
     console.log("ngOnIt call")
-    this.counter=setInterval(()=>{
-      this.num=this.num+1;
-      console.log(this.num)
-    },1000)
+    // this.counter=setInterval(()=>{
+    //   this.num=this.num+1;
+    //   console.log(this.num)
+    // },1000)
   }
 
 }

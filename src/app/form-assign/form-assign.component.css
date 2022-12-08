@@ -1,0 +1,35 @@
+
+    input.ng-invalid.ng-touched {
+        border: 1px solid red;
+        box-shadow: 0 0 13px #ff000021;
+    }
+    .container{
+        background-image: url(/assets/images/form1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .form-group{
+        font-size: 20px;
+        text-transform: capitalize;
+        color:black;
+        font-weight: bold;
+    }
+    h2{
+        text-align: center;
+    }
+    #d{
+        font-size: 20px;
+        text-transform: capitalize;
+        color:black;
+        font-weight: bold;  
+    }
+    .btn {
+        width: 100px;
+        color:black;
+        font-size: large;
+        font-weight: bold;
+    }
+    input[type="text"]{
+        font-size:18px  ;
+    
+    }

@@ -27,6 +27,8 @@ import { ParentcomponentComponent } from './parentcomponent/parentcomponent.comp
 import { ChildcomponentComponent } from './childcomponent/childcomponent.component';
 import { DirectiveAssignmentComponent } from './directive-assignment/directive-assignment.component';
 import { NewDirectiveAssignComponent } from './new-directive-assign/new-directive-assign.component';
+import { SimpleTemplateComponent } from './simple-template/simple-template.component';
+import { FormAssignComponent } from './form-assign/form-assign.component';
 
 @NgModule({
   declarations: [
@@ -76,6 +78,14 @@ import { NewDirectiveAssignComponent } from './new-directive-assign/new-directiv
     
   
     NewDirectiveAssignComponent,
+  
+    
+  
+    SimpleTemplateComponent,
+  
+    
+  
+    FormAssignComponent,
   
     
   
