@@ -29,6 +29,7 @@ import { DirectiveAssignmentComponent } from './directive-assignment/directive-a
 import { NewDirectiveAssignComponent } from './new-directive-assign/new-directive-assign.component';
 import { SimpleTemplateComponent } from './simple-template/simple-template.component';
 import { FormAssignComponent } from './form-assign/form-assign.component';
+import { FormAssignmentTwoComponent } from './form-assignment-two/form-assignment-two.component';
 
 @NgModule({
   declarations: [
@@ -86,6 +87,10 @@ import { FormAssignComponent } from './form-assign/form-assign.component';
     
   
     FormAssignComponent,
+  
+    
+  
+    FormAssignmentTwoComponent,
   
     
   

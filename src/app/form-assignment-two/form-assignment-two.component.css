@@ -1,0 +1,62 @@
+
+    input.ng-invalid.ng-touched {
+        border: 1px solid red;
+        box-shadow: 0 0 13px #ff000021;
+    }
+    .container{
+         background-image: url(/assets/images/Dark_Grey.png.imgo.png);
+        background-repeat: no-repeat;
+        background-size: cover; 
+        
+
+    }
+    .form-group{
+        font-size: 18px;
+        text-transform: capitalize;
+        color:black;
+        font-weight: bold;
+        text-shadow: #ff000021;
+    }
+    h2{
+        font-size: 30px;
+        text-align: center;
+        text-shadow: 3px 2px 5px;
+        color: white;
+        
+    }
+    #d{
+        font-size: 18px;
+        text-transform: capitalize;
+        color:black;
+         font-weight: bold; 
+
+    }
+    .btn {
+        width: 100px;
+        color:black;
+        font-size: large;
+        font-weight: bold; 
+    }
+    input[type="text"]{
+        font-size:18px  ;
+        box-shadow: 3px 5px 7px;
+    
+    }
+    .card{
+        width: 500px;
+        height: 400px;
+        margin-left: 200px;
+    }
+    .card-header{
+      color: black;  
+      background-color: gray;
+    }
+    p{
+        font-weight: bold;
+        font-size: 18px;
+        color:white;
+    }
+    .card-body{
+        background-image: url(/assets/images/form.jpg);
+
+    }

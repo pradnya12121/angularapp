@@ -1,0 +1,117 @@
+<p>form-assignment-two works!</p>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-left rounded shadow py-5">
+
+            <h2>Student Registraion Form</h2>
+            <form (ngSubmit)="OnSubmit(myForm)" #myForm="ngForm">
+                <div ngModelGroup="studentDetails" #studentDetails="ngModelGroup">
+                    <div class="form-group">
+                        <label for="username">Name</label>
+                        <input type="text" class="form-control" id="username" name="username"
+                            placeholder="Enter your name" required ngModel>
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="radb">Gender </label>
+                        <br>
+                        <input type="radio" id="radd" name="Gender" value="female" ngModel> &nbsp; Female &nbsp; &nbsp;
+                        &nbsp;
+
+                        <input type="radio" id="rad" name="Gender" value="male" ngModel> &nbsp;Male
+
+                    </div>
+
+
+                    <div class="from-group">
+                        <label id="d" for="dob">DOB</label>
+
+                        <input type="date" class="form-control" id="date" name="date" placeholder="Enter user name"
+                            ngModel>
+
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" #email="ngModel" id="email" email name="email"
+                        placeholder="Enter email" required ngModel>
+                    <span *ngIf="!email.valid && email.touched" class="text-danger">Please enter valid email</span>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" class="form-control" #address="ngModel" id="address" name="address"
+                        placeholder="Enter Proper Address" required ngModel>
+                    <small *ngIf="!address.valid && address.touched" class="text-danger">Please enter proper
+                        address</small>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="school">Colleges</label>
+                    <select class="form-control" name="school" id="school" [(ngModel)]="defaultValue">
+                        <option value="K.J.Somaiya">K.G.Somaiya</option>
+                        <option value="Cosmos">Cosmos</option>
+                        <option value="parag">Parag Vidyalay</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="department">Select Department</label>
+                    <select class="form-control" name="dept" id="dept" [(ngModel)]="defaultValue_two">
+                        <option value="IT">Information Technology</option>
+                        <option value="Civil">Civil</option>
+                        <option value="Electronics & Telecommunication">Electronics & Telecommunication</option>
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="mobile">Mobile Number</label>
+                    <input type="number" class="form-control" id="mobile" name="mobile" required ngModel>
+
+                </div>
+                <br>
+                <button type="submit" class="btn btn-secondary" [disabled]="!myForm.valid">Submit</button>
+
+
+
+
+
+            </form>
+
+
+
+
+
+
+
+        </div>
+    </div>
+</div>
+<br>
+<div class="card">
+<h2  class="card-header">Student Details </h2>
+
+        <div class="card-body">
+        <p>Name: &nbsp;&nbsp;{{studentDetails1.name}}</p>
+
+        <p>Gender:  &nbsp;&nbsp;{{studentDetails1.Gender}}</p>
+        <p>DOB:&nbsp; &nbsp;{{studentDetails1.date}} </p>
+        <p>Email Address:  &nbsp;&nbsp;{{studentDetails1.email}} </p>
+        <p>Address:  &nbsp;&nbsp;{{studentDetails1.address}}</p>
+        <p>Colleges:  &nbsp;&nbsp;{{studentDetails1.school}}</p>
+        <p>Department: &nbsp;&nbsp; {{studentDetails1.dept}}</p>
+        <p>Mobile: &nbsp;&nbsp; {{studentDetails1.mobile}}</p>
+
+    </div>
+
+
+</div>

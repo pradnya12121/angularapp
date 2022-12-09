@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Employee } from '../models/emp';
+
 
 @Component({
   selector: 'app-simple-template',
@@ -7,13 +9,26 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./simple-template.component.css']
 })
 export class SimpleTemplateComponent implements OnInit {
+  defaultValue:string="Angular"
+  employee = new Employee();
+  submitted: boolean = false;
+OnSubmit(form:NgForm) {
+    this.submitted = true;
+    this.employee .coursees = form.value.course;
+    this.employee .username = form.value.userDetails.username;
+    this.employee .email = form.value.userDetails.email;
+
+   this.saveEmployeeData(this.employee);
+  }
+
+  saveEmployeeData(emp:Employee) {
+   console.log(emp.coursees);
+  }
 
   constructor() { }
 
   ngOnInit() {
   }
-  OnSubmit(form:NgForm){
-console.log(form.value)
-  }
+
 
 }
