@@ -10,13 +10,15 @@ import { StudentDetails } from '../models/studentRegi';
 export class FormAssignmentTwoComponent implements OnInit {
 defaultValue:string="Cosmos"
 defaultValue_two:string="Electronics & Telecommunication";
-
+sunmitted:boolean=false;
 studentDetails1=new StudentDetails();
+currentDate:any=new Date();
   constructor() { }
 
   ngOnInit() {
   }
   OnSubmit(form:NgForm){
+     this.sunmitted=true;
 this.studentDetails1.name=form.value.studentDetails.username;
 this.studentDetails1.date=form.value.studentDetails.date;
 this.studentDetails1.Gender=form.value.studentDetails.Gender;

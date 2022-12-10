@@ -28,9 +28,9 @@
 
 
                     <div class="from-group">
-                        <label id="d" for="dob">DOB</label>
-
-                        <input type="date" class="form-control" id="date" name="date" placeholder="Enter user name"
+                        <label id="d" for="dob">Date</label>
+                         <!-- here | is use to formaing date according to given formate -->
+                        <input type="date" min="{{currentDate |date:'yyyy-MM-dd'}}" class="form-control" id="date" name="date" placeholder="Enter user name"
                             ngModel>
 
                     </div>
@@ -40,8 +40,8 @@
                 <div class="form-group">
                     <label for="email">Email address</label>
                     <input type="email" class="form-control" #email="ngModel" id="email" email name="email"
-                        placeholder="Enter email" required ngModel>
-                    <span *ngIf="!email.valid && email.touched" class="text-danger">Please enter valid email</span>
+                        placeholder="Enter email"  pattern="^[a-zA-Z0-9]+@codemind\.[a-zA-z]+$"   required ngModel>
+                    <span *ngIf="!email.valid && email.touched" class="text-danger">Please enter email @codemind.com</span>
 
                 </div>
 
@@ -92,26 +92,27 @@
 
 
 
-
         </div>
     </div>
 </div>
 <br>
+
+
 <div class="card">
-<h2  class="card-header">Student Details </h2>
-
-        <div class="card-body">
-        <p>Name: &nbsp;&nbsp;{{studentDetails1.name}}</p>
-
-        <p>Gender:  &nbsp;&nbsp;{{studentDetails1.Gender}}</p>
-        <p>DOB:&nbsp; &nbsp;{{studentDetails1.date}} </p>
-        <p>Email Address:  &nbsp;&nbsp;{{studentDetails1.email}} </p>
-        <p>Address:  &nbsp;&nbsp;{{studentDetails1.address}}</p>
-        <p>Colleges:  &nbsp;&nbsp;{{studentDetails1.school}}</p>
-        <p>Department: &nbsp;&nbsp; {{studentDetails1.dept}}</p>
-        <p>Mobile: &nbsp;&nbsp; {{studentDetails1.mobile}}</p>
-
+    <h2  class="card-header" *ngIf="submitted"> Student Details </h2>
+           
+            <div class="card-body">
+            <p>Name: &nbsp;&nbsp;{{studentDetails1.name}}</p>
+    
+            <p>Gender:  &nbsp;&nbsp;{{studentDetails1.Gender}}</p>
+            <p>DOB:&nbsp; &nbsp;{{studentDetails1.date}} </p>
+            <p>Email Address:  &nbsp;&nbsp;{{studentDetails1.email}} </p>
+            <p>Address:  &nbsp;&nbsp;{{studentDetails1.address}}</p>
+            <p>Colleges:  &nbsp;&nbsp;{{studentDetails1.school}}</p>
+            <p>Department: &nbsp;&nbsp; {{studentDetails1.dept}}</p>
+            <p>Mobile: &nbsp;&nbsp; {{studentDetails1.mobile}}</p>
+        
+        </div>
+    
+    
     </div>
-
-
-</div>

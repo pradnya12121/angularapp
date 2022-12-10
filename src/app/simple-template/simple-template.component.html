@@ -17,7 +17,14 @@
                       <small  class="text-danger"  *ngIf="!email.valid && email.touched">Enter Valid email</small>
                     </div>
                 </div>
-                
+                <div class="form-group">
+                    <div *ngFor="let m of  genders" class="custom-control custom-radio">
+                        
+                        <input type="radio" id="{{m.id}}" name="gender" value="{{m.value}}" [ngModel]="defaultGender">
+                        <label for={{m.id}} class="custom-control custom-label">{{m.value}}</label>
+                    </div>
+
+                </div>
                 
 
                 <div class="form-group">
@@ -36,6 +43,7 @@
                         <p>Username: <strong>{{employee.username}}</strong></p>
                         <p>Email: <strong>{{employee.email}}</strong></p>
                         <p>Course: <strong>{{employee.coursees}}</strong></p>
+                        <p>Gender: <strong>{{employee.gender}}</strong></p>
                     </div>
                   </div>
 

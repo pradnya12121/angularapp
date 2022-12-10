@@ -12,7 +12,7 @@
     }
     .form-group{
         font-size: 18px;
-        text-transform: capitalize;
+        /* text-transform: capitalize; */
         color:black;
         font-weight: bold;
         text-shadow: #ff000021;

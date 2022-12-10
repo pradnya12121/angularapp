@@ -10,13 +10,21 @@ import { Employee } from '../models/emp';
 })
 export class SimpleTemplateComponent implements OnInit {
   defaultValue:string="Angular"
+  defaultGender:string="Female"
   employee = new Employee();
   submitted: boolean = false;
+  genders=[{id:'1',value:'Female'},
+{id:'2',value:'Male'}]
 OnSubmit(form:NgForm) {
     this.submitted = true;
     this.employee .coursees = form.value.course;
     this.employee .username = form.value.userDetails.username;
     this.employee .email = form.value.userDetails.email;
+    this.employee.gender=form.value.gender;
+    form.reset();
+    form.controls['course'].setValue("Angular");
+    form.controls['gender'].setValue("Female")
+    
 
    this.saveEmployeeData(this.employee);
   }
