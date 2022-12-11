@@ -1,0 +1,17 @@
+<p>cosmatic-two works!</p>
+<div class="container">
+<div class="card">
+
+  
+  <div class="card-header">
+  <ng-content select=".header"></ng-content>
+</div>
+    <ul *ngFor="let p of product" class="list-group">
+        <li class="list-group-item d-flex  justify-content-between align-items-center">
+        {{p.name}}
+          <span class="badge bg-primary rounded-pill">{{p.price}}</span>
+        </li>
+     </ul>
+     <ng-content select=".link"></ng-content>
+</div>
+</div>

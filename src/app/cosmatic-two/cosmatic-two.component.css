@@ -1,0 +1,23 @@
+
+.container{
+    justify-content: center;
+    width: 500px;
+    height: 300px;
+}
+.card-header{
+    color:white;
+    background-color: black;
+}
+.list-group-item{
+    font-size: 20px;
+    color:rgb(30, 31, 16) ;
+    font-weight: bold;
+}
+.card{
+    background-image: url(/assets/images/form.jpg);
+}
+.list-group-item{
+    background-image:url(/assets/images/imagesecom.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}

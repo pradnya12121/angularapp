@@ -30,6 +30,8 @@ import { NewDirectiveAssignComponent } from './new-directive-assign/new-directiv
 import { SimpleTemplateComponent } from './simple-template/simple-template.component';
 import { FormAssignComponent } from './form-assign/form-assign.component';
 import { FormAssignmentTwoComponent } from './form-assignment-two/form-assignment-two.component';
+import { CosmaticComponent } from './cosmatic/cosmatic.component';
+import { CosmaticTwoComponent } from './cosmatic-two/cosmatic-two.component';
 
 @NgModule({
   declarations: [
@@ -91,6 +93,14 @@ import { FormAssignmentTwoComponent } from './form-assignment-two/form-assignmen
     
   
     FormAssignmentTwoComponent,
+  
+    
+  
+    CosmaticComponent,
+  
+    
+  
+    CosmaticTwoComponent,
   
     
   
