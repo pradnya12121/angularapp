@@ -1,0 +1,29 @@
+.card{
+    width: 400px;
+    height: 250px;
+    margin-left: 450px;
+    background-color: grey;
+}
+.card-header{
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+.ctn{
+    background-color: black;
+}
+.container{
+    background-color: black;
+}
+h3{
+    text-align: center;
+    color: white;
+}
+label{
+    color: white;
+    font-size: 20px;
+}
+p{
+    color:black;
+    font-size: 18px;
+}

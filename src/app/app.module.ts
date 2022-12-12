@@ -33,6 +33,7 @@ import { FormAssignmentTwoComponent } from './form-assignment-two/form-assignmen
 import { CosmaticComponent } from './cosmatic/cosmatic.component';
 import { CosmaticTwoComponent } from './cosmatic-two/cosmatic-two.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 
 @NgModule({
   declarations: [
@@ -106,6 +107,10 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     
   
     ReactiveFormComponent,
+  
+    
+  
+    TemplateDrivenFormComponent,
   
     
   

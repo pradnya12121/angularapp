@@ -1,0 +1,52 @@
+<p>template-driven-form works!</p>
+<div class="container">
+    <div class="ctn">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-left rounded shadow py-5">
+            <form (ngSubmit)="onSubmit(signupForm)" #signupForm="ngForm">
+                <h3>Registarion Form</h3>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" #username="ngModel" name="username" id="username" ngModel required>
+                    <small  class="text-danger" *ngIf="!username.valid && username.touched || kk">Please enter username</small>
+
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" class="form-control"  #email="ngModel"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"   name="email" id="email" ngModel required>
+                    <small class="text-danger" *ngIf="!email.valid && email.touched || kk">Enter valid email address</small>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password"  #password="ngModel" name="password" id="password" class="form-control" ngModel required>
+                     <small class="text-danger" *ngIf="!password.valid && password.touched ||kk"> Enter correct Password</small>
+                </div>
+                <div class="form-group">
+                    <label for="subscription">Subscription</label>
+                    <select class="form-control" name="subscription" id="subscription" [(ngModel)]="defaultValue">
+                        <option value="Basic">Basic</option>
+                        <option value="Advanced">Advanced</option>
+                        <option value="Pro">Pro</option>
+
+                    </select>
+
+                </div>
+                <button  class="btn btn-primary" type="submit">Submit</button>
+                <div  class="text-danger" *ngIf="!signupForm.valid || signupForm.touched || kk">Please fill all above field</div>
+              
+            </form>
+            
+        </div>
+    </div>
+    <div class="card">
+        <h2 class="card-header">Form Details</h2>
+    <div *ngFor="let d of array">
+        <p>Username: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>{{d.username}}</b></p>
+        <p>Email: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; <b> {{d.email}} </b></p>
+        <p>Password &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>{{d.password}}</b></p>
+        <p>Subscription &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>{{d.subscription}}</b></p>
+        
+    </div>
+</div>
+</div>
+</div>
