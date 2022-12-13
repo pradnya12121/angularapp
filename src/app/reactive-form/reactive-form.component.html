@@ -7,10 +7,10 @@
                 <label for="username">Username</label>
               <input type="text"  id="username" class="form-control" formControlName="username" placeholder="Enter user name">
               <small *ngIf="!myReactiveForm.get('username').valid && myReactiveForm.get('username').touched">
-               <small  calss="text-danger" *ngIf="myReactiveForm.get('username').errors['required']">Enter username 
+               <small  class="text-danger" *ngIf="myReactiveForm.get('username').errors['required']">Enter username 
               </small>
-              <small  calss="text-danger" *ngIf="myReactiveForm.get('username').errors['nameNotAllowed']">
-                codemind is not allowed
+              <small  class="text-danger" *ngIf="myReactiveForm.get('username').errors['nameNotAllowed']">
+               {{myReactiveForm.get('username').value}} is not allowed
               </small>
               
 
@@ -39,7 +39,7 @@
              <label for="{{gender.id}}">{{gender.value}}</label>
           
         </div>
-              <button type="submit">Submit</button>
+              <button class="btn btn-primary" type="submit">Submit</button>
             </form>
              
         

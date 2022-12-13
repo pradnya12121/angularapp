@@ -3,3 +3,18 @@
         border: 1px solid red;
         box-shadow: 0 0 13px #ff000021;
     }
+    .form{
+        border: 2px solid black;
+    }
+    .col-md-6{
+        border: 2px solid #000000;
+        margin-bottom: 20px;
+        background-color:grey;
+       
+    }
+    label{
+        font-size: 20px;
+    }
+    small{
+        font-size: 17px;
+    }
