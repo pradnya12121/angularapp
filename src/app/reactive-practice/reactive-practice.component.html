@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-left">
+         <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+         <div formGroupName="myDetails">
+            <div class="form-group">
+                <label for="myDetails.username">Username</label>
+                <input type="text" id="username" formControlName="username" class="form-control">
+                <small class="text-danger" *ngIf="!myForm.get('myDetails.username').valid && myForm.get('myDetails.username').touched">
+               <small  class="text-danger" *ngIf="!myForm.get('myDetails.username').valid && myForm.get('myDetails.username').errors['required']">
+                Please Enter username
+
+               </small>
+              
+               <small  class="text-danger" *ngIf="!myForm.get('myDetails.username').valid && myForm.get('myDetails.username').errors['notName']">
+            {{myForm.get('myDetails.username').value}} is not allowed
+
+               </small>
+              
+
+                </small>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" formControlName="email" class="form-control">
+                <small *ngIf="!myForm.get('myDetails.email').valid && myForm.get('myDetails.email').touched" >
+                    <small  class="text-danger" *ngIf="!myForm.get('myDetails.email').valid && myForm.get('myDetails.email').errors['required']">
+                    Please Enter email
+                    </small>
+                </small>
+
+            </div>
+         </div>
+
+
+
+            <div class="form-group">
+                 <label for="course">Course</label>
+                 <select id="course" formControlName="course" class="form-control">
+                    <option value="Sql">Sql</option>
+                    <option value="Oracle">Oracle</option>
+                    <option value="Angular">Angular</option>
+                 </select>
+            </div>
+            <div  *ngFor="let gender of genders"  class="custom-control custom-radio">
+                <input type="radio"id={{gender.id}}  value="{{gender.value}}" class="custom-control-input" formControlName="gender">
+                <label for="{{gender.id}}">{{gender.value}}</label>
+
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+
+         </form>
+        </div>
+    </div>
+</div>
