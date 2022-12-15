@@ -54,75 +54,22 @@ import { ReactivePracticeComponent } from './reactive-practice/reactive-practice
     AttriComponent,
     CustomDirDirective,
     ConfirmpassComponent,
-  
-    ConfirmEqualValidatorDirective,
-  
-    
-  
-    ChildComponent,
-  
-    
-  
-    ChildoutComponent,
-  
-    
-  
-    HooksComponent,
-  
-    
-  
-    ParentcomponentComponent,
-  
-    
-  
-    ChildcomponentComponent,
-  
-    
-  
-    DirectiveAssignmentComponent,
-  
-    
-  
-    NewDirectiveAssignComponent,
-  
-    
-  
-    SimpleTemplateComponent,
-  
-    
-  
-    FormAssignComponent,
-  
-    
-  
-    FormAssignmentTwoComponent,
-  
-    
-  
-    CosmaticComponent,
-  
-    
-  
-    CosmaticTwoComponent,
-  
-    
-  
-    ReactiveFormComponent,
-  
-    
-  
-    TemplateDrivenFormComponent,
-  
-    
-  
-    ReactivePracticeComponent,
-  
-    
-  
-  
-  
-    
-  
+   ConfirmEqualValidatorDirective,
+  ChildComponent,
+ChildoutComponent,
+ HooksComponent,
+ParentcomponentComponent,
+ChildcomponentComponent,
+ DirectiveAssignmentComponent,
+NewDirectiveAssignComponent,
+  SimpleTemplateComponent,
+   FormAssignComponent,
+  FormAssignmentTwoComponent,
+   CosmaticComponent,
+ CosmaticTwoComponent,
+  ReactiveFormComponent,
+  TemplateDrivenFormComponent,
+   ReactivePracticeComponent,
     // ServerComponent
   ],
   imports: [
