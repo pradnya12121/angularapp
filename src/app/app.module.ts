@@ -35,6 +35,7 @@ import { CosmaticTwoComponent } from './cosmatic-two/cosmatic-two.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 import { ReactivePracticeComponent } from './reactive-practice/reactive-practice.component';
+import { AssignmentTemplateDrivenComponent } from './assignment-template-driven/assignment-template-driven.component';
 
 @NgModule({
   declarations: [
@@ -70,6 +71,7 @@ NewDirectiveAssignComponent,
   ReactiveFormComponent,
   TemplateDrivenFormComponent,
    ReactivePracticeComponent,
+   AssignmentTemplateDrivenComponent,
     // ServerComponent
   ],
   imports: [

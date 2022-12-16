@@ -1,0 +1,154 @@
+<p>assignment-template-driven works!</p>
+
+<div class="container">
+
+    <div class="row justify-content-center">
+        <div class="col-md-5 text-left  rounded shadow py-5">
+            <h3>Registration Form</h3>
+            <form (ngSubmit)="OnSubmit(myForm)" #myForm="ngForm">
+                <div ngModelGroup="userDetails" #userDetails="ngModelGroup">
+                  <div class="form-group">
+                <label for="firstname">First Name</label>
+                <input type="text" class="form-control" #firstname="ngModel" name="firstname" id="firstname" [(ngModel)]="firstname.firstname" placeholder="enter first name" required >
+                <small class="text-danger" *ngIf="!firstname.valid && firstname.touched">Please enter name
+                </small>
+                <small
+                class="text-danger"
+                *ngIf="firstname.firstname?.length < 5 && !firstname.firstname?.length == '' ">
+                first name contain only 5 characters
+              </small>
+
+              <small
+              class="text-danger"
+              *ngIf="firstname.firstname?.length > 5 && !firstname.firstname?.length == '' ">
+              first name contain only 5 characters
+            </small>
+                
+                </div>
+                <div class="form-group">
+                <label for="lastname">Last Name</label>
+                <input type="text" class="form-control" name="lastname" #lastname="ngModel" id="lastname" [(ngModel)]="lastname.lastname" placeholder="enter last name" required>
+                <small *ngIf="!lastname.valid && lastname.touched" class="text-danger">Please enter Last name</small>
+                <small
+              class="text-danger"
+              *ngIf="lastname.lastname?.length > 10 && !lastname.lastname?.length == '' ">
+              last name contain only 10 characters
+            </small>
+                </div>
+                </div>
+                <div class="form-group">
+                    <label for="Age">Age</label>
+                    <input type="number" class="form-control" id="age" #age='ngModel' name="age" placeholder="age between 17-20" [(ngModel)]="age.age" required>
+                    <small class="text-danger" *ngIf="!age.valid && age.touched">Age is required</small>
+                <small *ngIf="age.age <17" class="text-danger">Age not allowed less than 17</small>
+                <small *ngIf="age.age >20" class="text-danger">Age not allowed greater than 20</small>
+                    
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" name="email" id="email" #email="ngModel" ngModel required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-z]+$" placeholder="enter email">
+                    <small  class="text-danger" *ngIf="!email.valid && email.touched"> 
+                       
+                    </small>
+                    <small *ngIf="!email.valid && email.errors && email.touched" class="text-danger">Please enter valid email</small>
+                 
+
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone No</label>
+                    <input
+                      type="text"
+                      #phone="ngModel"
+                      name="phone"
+                      placeholder="please enter phone number"
+                      class="form-control"
+                      [(ngModel)]="phone.phone"
+                      required
+                    />
+                    <small
+                      class="text-danger"
+                      *ngIf="!phone.valid && phone.touched" >
+                      Please enter Phone number </small>
+                    <small
+                      class="text-danger"
+                      *ngIf="phone.phone?.length> 10 && !phone.phone?.length == ''">
+                      Phone number should not greater than 10 numbers
+                    </small>
+                    <small
+                      class="text-danger"
+                      *ngIf="phone.phone?.length< 10 && !phone.phone?.length == ''">
+                      Phone number should not be less than 10 numbers
+                    </small>
+            
+
+                </div>
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <select class="form-control" name="city"  [(ngModel)]="defaultValue">
+                     <option value="Mumbai">Mumbai</option>
+                     <option value="Kolkata">Kolkata</option>
+                     <option value="Delhi">Delhi</option>
+
+                    </select>
+
+                </div>
+                <div class="form-group">
+                    <div *ngFor="let m of  genders" class="custom-control custom-radio">
+                        
+                        <input type="radio" id="{{m.id}}" name="gender" value="{{m.value}}" [ngModel]="defaultGender">
+                        <label for={{m.id}} class="custom-control custom-label">{{m.value}}</label>
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label> 
+                    <input type="password" class="form-control" name="password" id="password" #password="ngModel" [(ngModel)]="password.password" required placeholder="enter password">
+                    <small  class="text-danger" *ngIf="!password.valid && password.touched">Please Enetr Password </small>
+                </div>
+                <div class="form-group">
+                    <label for="password"> Confirm Password</label>
+                    <input type="password"  class="form-control" name="confirmPassword" id="confirmPassword" #confirmPassword="ngModel" [(ngModel)]="confirmPassword.confirmPassword" required placeholder="enter confirm password">
+                    <small class="text-danger" *ngIf="!confirmPassword.valid && confirmPassword.touched">Please Enter confirm Password</small>
+                    <small  class="text-danger" *ngIf="confirmPassword.confirmPassword !==password.password">Password and confirm Password is mismatch</small>
+
+                </div>
+                  
+
+                <button  class="btn btn-primary mt-2" type="submit">Submit</button>
+            </form>
+
+        </div>
+
+    </div>
+    <div>
+        <h2>UserDetails</h2>
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <td>FirstName</td>
+                    <td>LastName</td>
+                    <td>Age</td>
+                    <td>Email</td>
+                    <td>Phone</td>
+                    <td>City</td>
+                    <td>Gender</td>
+                    <td>Password</td>
+                    <td>confirmPassword</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let data of  userTwo">
+                    <td>{{data.firstname}}</td>
+                    <td>{{data.lastname}}</td>
+                    <td>{{data.age}}</td>
+                    <td>{{data.email}}</td>
+                    <td>{{data.phone}}</td>
+                    <td>{{data.city}}</td>
+                    <td>{{data.gender}}</td>
+                    <td>{{data.password}}</td>
+                    <td>{{data.confirmPassword}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

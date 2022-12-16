@@ -1,0 +1,21 @@
+input.ng-invalid.ng-touched{
+    border: 2px solid red;
+}
+.row{
+    background-image: url(/assets/images/form.jpg);
+    width: 700px;
+    height: 900px;
+    border: 2px solid black;
+}
+
+input {
+    /* color:white */
+}
+label{
+    color: white;
+    font-size: 18px;
+}
+h3{
+    color: white;
+    text-align: center;
+}
