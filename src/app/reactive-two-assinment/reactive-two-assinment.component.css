@@ -1,0 +1,29 @@
+input.ng-invalid.ng-touched{
+    border: 2px solid red;
+}
+h2{
+    text-align: center;
+}
+.container{
+    /* width: 600px; */
+    margin-top: 0px;
+    height: 800px; 
+    background-color: gray ;
+    
+
+}
+form{
+    margin-top: 0px;
+  background-color: black; 
+  margin-left: 60px;
+  width: 700px;
+  /* height: 700px; */
+
+}
+label{
+    color: white;
+    font-size: 18px;
+}
+.btn{
+    margin-left: 10px;
+}

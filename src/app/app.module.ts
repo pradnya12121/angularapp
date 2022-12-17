@@ -36,6 +36,7 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 import { ReactivePracticeComponent } from './reactive-practice/reactive-practice.component';
 import { AssignmentTemplateDrivenComponent } from './assignment-template-driven/assignment-template-driven.component';
+import { ReactiveTwoAssinmentComponent } from './reactive-two-assinment/reactive-two-assinment.component';
 
 @NgModule({
   declarations: [
@@ -72,6 +73,7 @@ NewDirectiveAssignComponent,
   TemplateDrivenFormComponent,
    ReactivePracticeComponent,
    AssignmentTemplateDrivenComponent,
+   ReactiveTwoAssinmentComponent,
     // ServerComponent
   ],
   imports: [

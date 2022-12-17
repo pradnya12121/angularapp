@@ -8,9 +8,6 @@ input.ng-invalid.ng-touched{
     border: 2px solid black;
 }
 
-input {
-    /* color:white */
-}
 label{
     color: white;
     font-size: 18px;

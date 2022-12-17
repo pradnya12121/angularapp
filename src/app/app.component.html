@@ -78,8 +78,7 @@
 </div> --> -->
 <!--     
   
-    <app-demodirectives (foodevent)="getDataFromChild($event)"></app-demodirectives>  -->
-    <select (change)="uid=sid.value" #sid>
+ <!-- <select (change)="uid=sid.value" #sid>
       <option selected disabled>No value Selected</option>
       <option [value] ="id" *ngFor=" let id of [1,2,3,4]">
         {{id}}
@@ -87,9 +86,10 @@
     </select>
    <!-- <app-hooks [userid]="uid" [parentData]="data" [product]="prodct">
     <h1>This is childe content coming from Parent</h1>
-   </app-hooks> -->
-    <app-parentcomponent></app-parentcomponent>
-    <app-directive-assignment></app-directive-assignment> -->
+   <!-- </app-hooks> -->
+    <!-- <app-parentcomponent></app-parentcomponent>
+    <app-directive-assignment></app-directive-assignment> -->    <app-demodirectives (foodevent)="getDataFromChild($event)"></app-demodirectives>  --> --> --> -->
+   
     <!-- <app-new-directive-assign></app-new-directive-assign>
      <h1 #child>This is child content coming from parent component</h1> -->
 <!-- <app-hooks *ngIf="isShow" [userid]="uid" [parentData]="data" [product]="product">
@@ -98,7 +98,7 @@
   
 
 </app-hooks> -->
-<button (click)="destroy()">Destory</button>
+<!-- <button (click)="destroy()">Destory</button>
 <br>
 
     <input type="text" (blur)="handleData($event)"><br>
@@ -109,14 +109,15 @@
    
    <button (click)="updateProduct()">Update Product</button>
 
-   <app-simple-template></app-simple-template>
-   <app-form-assign></app-form-assign>
+   <app-simple-template></app-simple-template> -->
+   <!-- <app-form-assign></app-form-assign>
    <!-- <app-form-assignment-two></app-form-assignment-two> -->
 
    <!-- <app-cosmatic></app-cosmatic> -->
-   <br>
+   <!-- <br>
    <br>
    <app-reactive-form></app-reactive-form>
    <!-- <app-template-driven-form></app-template-driven-form> -->
-   <app-reactive-practice></app-reactive-practice>
+   <!-- <app-reactive-practice></app-reactive-practice> --> --> -->
    <app-assignment-template-driven></app-assignment-template-driven>
+   <app-reactive-two-assinment></app-reactive-two-assinment>
