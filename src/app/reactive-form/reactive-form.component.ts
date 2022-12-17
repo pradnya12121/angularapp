@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -22,8 +22,14 @@ createForm(){
     'email':new FormControl('',[Validators.required,Validators.email,this.NaEmails]),
   }),
     'course':new FormControl('Angular'),
-    'gender':new FormControl('')
+    'gender':new FormControl(''),
+    'skills':new FormArray([
+      new FormControl(null)
+    ])
   })
+}
+onAddSkills(){
+  (<FormArray>this.myReactiveForm.get('skills')).push(new FormControl(null))
 }
 onSubmit(){
   console.log(this.myReactiveForm);
