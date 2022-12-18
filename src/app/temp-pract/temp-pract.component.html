@@ -1,0 +1,76 @@
+<p>temp-pract works!</p>
+<div class="container">
+    <div class="row justify content center">
+        <div class="col-md-6 text-left rounded shadow py-5">
+            <form (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
+                <div class="form-group">
+                      <label for="firstname">Firstname</label>
+                          <input type="text" id="firstname" name="firstname"  #firstname="ngModel" placeholder="enter your firstname" class="form-control" required [(ngModel)]="firstname.firstname">
+                          <div class="text-danger" *ngIf="firstname.invalid && firstname.touched">firstname is required</div>
+                          <div *ngIf="firstname.firstname?.length >5" class="text-danger">firstname is not more than 5 character</div>
+                          <!-- <div *ngIf="firstname.firstname?.length <5" class="text-danger">Firstname is not contain less then 5 character</div> -->
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname">Lastname</label>
+                            <input type="text" class="form-control" name="lastname" #lastname="ngModel" id="lastname" required [(ngModel)]="lastname.lastname" placeholder="enter your last name">
+                            <div *ngIf="lastname.invalid  && lastname.touched" class="text-danger">Last name is required</div>
+                            <div *ngIf="lastname.lastname?.length >10" class="text-danger"> Lastname aloowed only 10 character</div>
+
+                        </div>
+                        <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="number" name="age" id="age" class="form-control" #age="ngModel" [(ngModel)]="age.age" required placeholder="enter your age">
+                        <div *ngIf="age.invalid && age.touched" class="text-danger">Age is required</div>
+                        <div *ngIf="age.age<17">Age is between 17 and 29</div>
+                        <div *ngIf="age.age>20">Age is not more than 20</div> 
+                     </div>
+                     <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" class="form-control" required ngModel #email="ngModel" placeholder="enter your email">
+                        <div *ngIf="email.invalid && email.touched"  class="text-danger">Please enter your proper mail</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone No.</label>
+                        <input type="number" name="phone" id="phone" class="form-control" #phone="ngModel" [(ngModel)]="phone.phone" required placeholder="enter your phone">
+                        <div *ngIf="phone.invalid && phone.touched" class="text-danger"> Phone number is required</div>
+                        <div *ngIf="phone.phone?.length< 10 && !phone.phone?.length == ''" class="text-danger">Phone number must be 10 number</div>
+                        <div *ngIf="phone.phone?.length> 10" class="text-danger">Phone number shuld not be greater than 10</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Course</label>
+                        <select class="form-control" name="course" id="course" [(ngModel)]="defaultValue">
+                            <option value="Angular">Angular</option>
+                            <option value="Css">Css</option>
+                            <option value="HTML">HTML</option>
+                        </select>
+
+                    </div>
+                    <!-- <div class="form-group">
+                         <label for="gender">Gender</label> &nbsp;&nbsp; 
+                         <input type="radio" id="gender" name="gender" value="female">Female 
+                         <input type="radio" id="gender" name="gender" value="male">Male
+                    </div> -->
+                    <div class="custom-control custom-radio" *ngFor="let gender of genders">
+                        <input type="radio" id="{{gender.id}}" name="gender"  value="{{gender.value}}" [ngModel]="defaultGender">
+                        <label for="{{gender.id}}">{{gender.value}}</label> 
+
+                    </div>
+                      <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" name="password" id="password" required [(ngModel)]="password.password" #password="ngModel"> 
+                        <div *ngIf="password.invalid && password.touched" class="text-danger">Password is required</div>
+
+                      </div>
+                      <div class="form-group">
+                        <label for="confirmPassword"> Confirm Password</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" required #confirmPassword ="ngModel" [(ngModel)]="confirmPassword.confirmPassword">
+                        <div *ngIf="confirmPassword.invalid && confirmPassword.touched">Confirm password is required</div>
+                        <div *ngIf="confirmPassword.confirmPassword !==password.password">ConfirmPAssword is not mis match</div>
+
+                      </div>
+
+             <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
