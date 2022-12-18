@@ -24,12 +24,12 @@ createForm(){
     'course':new FormControl('Angular'),
     'gender':new FormControl(''),
     'skills':new FormArray([
-      new FormControl(null)
+      new FormControl(null,Validators.required)
     ])
   })
 }
 onAddSkills(){
-  (<FormArray>this.myReactiveForm.get('skills')).push(new FormControl(null))
+  (<FormArray>this.myReactiveForm.get('skills')).push(new FormControl(null,Validators.required))
 }
 onSubmit(){
   console.log(this.myReactiveForm);
