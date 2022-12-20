@@ -39,6 +39,9 @@ import { AssignmentTemplateDrivenComponent } from './assignment-template-driven/
 import { ReactiveTwoAssinmentComponent } from './reactive-two-assinment/reactive-two-assinment.component';
 import { TempPractComponent } from './temp-pract/temp-pract.component';
 import { RectComponent } from './rect/rect.component';
+import { ServiceComponent1Component } from './service-component1/service-component1.component';
+import { ServiceComponent2Component } from './service-component2/service-component2.component';
+import { HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -78,13 +81,16 @@ NewDirectiveAssignComponent,
    ReactiveTwoAssinmentComponent,
    TempPractComponent,
    RectComponent,
+   ServiceComponent1Component,
+   ServiceComponent2Component,
     // ServerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

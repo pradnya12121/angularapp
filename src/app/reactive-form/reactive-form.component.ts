@@ -31,6 +31,12 @@ createForm(){
 onAddSkills(){
   (<FormArray>this.myReactiveForm.get('skills')).push(new FormControl(null,Validators.required))
 }
+
+removeButton(i){
+  (<FormArray> this.myReactiveForm.get('skills')).removeAt(i)
+
+
+}
 onSubmit(){
   console.log(this.myReactiveForm);
 }

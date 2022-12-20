@@ -6,12 +6,70 @@
             <div class="form-group">
                 <label for="firstname">Firstname</label>
                 <input type="text" id="firstname" formControlName="firstname" class="form-control">
-                <div *ngIf="!firstname.valid && firstname.touched">
+                <div *ngIf="!firstname.valid && firstname.touched" class="text-danger">
                 <div *ngIf="firstname?.errors.required">Firstname is required</div>
                 <div *ngIf="firstname?.errors.maxlength">Firstname contain only 5 character</div>
             </div>
             </div>
+           
+            
 
+            <div class="form-group">
+            <label for="lastname">Lastname</label>
+            <input type="text" class="form-control" formControlName="lastname">
+            <div *ngIf="lastname.invalid && lastname.touched" class="text-danger"> 
+                <div *ngIf="lastname?.errors.required">Last name is reqired</div>
+                <div *ngIf="lastname?.errors.maxlength">Last name contain only 10 character</div>
+            </div>
+            </div>
+
+            <div class="form-group">
+             <label for="age">Age</label>
+             <input tyep="text" class="form-control" formControlName="age" id="age">
+             <div *ngIf="age.invalid && age.touched" class="text-danger">
+                <div *ngIf="age?.errors.required">Age is Required</div>
+                <div *ngIf="age?.errors.min">Age is not less than 17</div>
+                <div *ngIf="age?.errors.max">Age is not more than 20 </div>
+             </div>
+            </div>
+
+
+           <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" class="form-control" formControlName="email">
+            <div *ngIf="email.invalid && email.touched" class="text-danger">
+                <div *ngIf="email?.errors.required"> Email is required</div>
+                <div *ngIf="email?.errors.email">Please enter valid email</div>
+            </div>
+            </div>
+
+
+            <div class="form-group">
+                <label for="phone">Phone number</label>
+                <input type="number" class="form-control" formControlName="phone">
+                <div *ngIf="phone?.invalid && phone.touched" class="text-danger">
+                    <div *ngIf="phone?.errors.required">Phon number is required</div>
+                    <div *ngIf="phone?.errors.pattern"> Phone number should be 10 digit only</div>
+                </div>
+
+            </div>
+
+
+            <div class="form-group" formArrayName="skills">
+                <label for="skill">Skills</label>
+                <ng-container *ngFor="let k of this.myForm.get('skills').controls;index as i ">
+                  <input type="text" class="form-control" formControlName="{{i}}" placeholder="Addskills"> 
+                    
+              <button (click)="removeButton(i)"><i>-</i> Remove Skills</button> 
+                
+                </ng-container>
+              <button (click)="onAddButton()"> <i>+</i>Add Skills</button> &nbsp;
+                
+            
+            
+            </div>
+           <button type="submit" class="btn btn-primary mt-3">Submit</button>
+           
         </form>
         
     </div>

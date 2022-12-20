@@ -35,3 +35,20 @@
        border: 1px solid #007bff; 
     }
     
+    .btn-sub{
+        font-size: 12px;
+        font-weight: 700;
+        color:rgba(0,0,0, 0.397);
+        background-color: red;
+    }
+    .btn-sub i{
+        font-size: 30px;
+        line-height: 15px;
+        display: inline-block;
+        position: relative;
+        top: 7px;
+        margin-right: 3px;
+    }
+    .btn-sub:hover{
+       border: 1px solid #007bff; 
+    }
