@@ -1,0 +1,12 @@
+input.ng-invalid.ng-touched{
+    border: 2px solid red;
+}
+.col-md-6{
+    width: 400px;
+    background-image:url(/assets/images/images.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+label{
+    font-weight: bold;
+}

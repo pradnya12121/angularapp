@@ -42,6 +42,7 @@ import { RectComponent } from './rect/rect.component';
 import { ServiceComponent1Component } from './service-component1/service-component1.component';
 import { ServiceComponent2Component } from './service-component2/service-component2.component';
 import { HttpClientModule} from '@angular/common/http';
+import { ReactiveApprochComponent } from './Services/reactive-approch/reactive-approch.component';
 
 @NgModule({
   declarations: [
@@ -83,6 +84,7 @@ NewDirectiveAssignComponent,
    RectComponent,
    ServiceComponent1Component,
    ServiceComponent2Component,
+   ReactiveApprochComponent,
     // ServerComponent
   ],
   imports: [
