@@ -33,7 +33,7 @@ myForm:FormGroup;
   }
    removeButton(i){
       (<FormArray> this.myForm.get('skills')).removeAt(i)
-    //  <FormArray>this.skills.splice(i,1)
+    
 
   }
 

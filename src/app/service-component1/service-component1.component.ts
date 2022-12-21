@@ -12,7 +12,7 @@ export class ServiceComponent1Component implements OnInit {
 products={};
 apiData={};
   ngOnInit() {
-    // this.products=this._demoService.product
+    
     this._demoService.getUsersData().subscribe(data => {
       console.log('getting data from api', data);
       this.apiData=(data);

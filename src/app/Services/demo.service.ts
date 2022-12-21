@@ -9,7 +9,9 @@ export class DemoService {
     {id:102,name:'Laptop'},
   {id:103,name:'TV'},
 {id:104,name:'AC'}]
-apiURL='https://jsonplaceholder.typicode.com/users'
+// apiURL='https://jsonplaceholder.typicode.com/users'
+
+apiURL='https://jsonplaceholder.typicode.com/'
 
 
   constructor(private http:HttpClient) {
@@ -19,6 +21,16 @@ apiURL='https://jsonplaceholder.typicode.com/users'
     alert('subscribe sucessfully')
   }
   getUsersData(){
-    return this.http.get(this.apiURL)
+    let users='users'
+    return this.http.get(this.apiURL + users)
       }
+
+
+
+
+      gePosts(){
+        let posts='posts'
+        return this.http.get(this.apiURL + posts)
+          }
 }
+

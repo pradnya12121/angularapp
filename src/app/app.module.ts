@@ -44,6 +44,12 @@ import { ServiceComponent2Component } from './service-component2/service-compone
 import { HttpClientModule} from '@angular/common/http';
 import { ReactiveApprochComponent } from './Services/reactive-approch/reactive-approch.component';
 
+import { Comp2Component } from './comp2/comp2.component';
+import { Comp3Component } from './comp3/comp3.component';
+import { Comp4Component } from './comp4/comp4.component';
+import { Comp1Component } from './comp1/comp1.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -85,6 +91,12 @@ NewDirectiveAssignComponent,
    ServiceComponent1Component,
    ServiceComponent2Component,
    ReactiveApprochComponent,
+   
+   Comp2Component,
+   Comp3Component,
+   Comp4Component,
+   Comp1Component,
+  
     // ServerComponent
   ],
   imports: [

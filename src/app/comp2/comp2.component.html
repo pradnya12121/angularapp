@@ -1,0 +1,50 @@
+<p>comp2 works!</p>
+<!-- <div class="box">
+    UserName : <strong>{{userName}}</strong>
+    <br>
+    <input type="text" id="username" name="username" #uname placeholder="Update Name">
+    <button (click)="onUpdate(uname)">Update</button>
+    </div> -->
+
+
+
+
+
+<!--     
+
+    <table class="table">
+        <thead>
+            <tr>
+                <td>Product ID</td>
+                <td>Product Name</td>
+                <td>Product Price</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of product">
+                <td>{{data}}</td>
+                <td>{{data}}</td>
+                <td>{{data}}</td>
+            </tr>
+        </tbody>
+      </table>
+<br> -->
+
+<h2>Product Details</h2>
+<ul *ngFor="let data of product">
+    <li> {{data}}</li>
+</ul>
+    
+<!-- <input type="text" id="username" name="username" #uname placeholder="Update Name"> -->
+<div class="row justify-content-center">
+<div class="col-md-4 text-left rounded shadow py-5">
+<b>Product ID :</b><input type="text" id="pid" name="pid" #pid placeholder="product id" class="form-control">
+<br>
+
+<b>Product Name: </b><input type="text" id="pname" name="pname" #pname placeholder="Product Name" class="form-control">
+<br>
+<b>Product Price: </b><input type="text" id="pprice" name="pprice" #pprice placeholder="Product Price" class="form-control">
+<br>
+<button (click)="onUpdate(pid,pname,pprice)" class="btn btn-primary">Update</button>
+</div>
+</div>
