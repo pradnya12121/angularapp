@@ -1,0 +1,41 @@
+<p>pipedemo works!</p>
+<div class="card">
+<h4 class="card-header">Pipe example</h4>
+
+<div>
+  <ul><b>Date:</b>
+
+  <li>Todays Date: {{ todayDate | date: 'fullDate' | lowercase}}</li>
+  <li>Todays Date: {{ todayDate | date | uppercase}}</li>
+</ul> 
+</div>
+
+<div>
+    <ul><b>Async :</b>
+       <li>Designation: {{obser | async}}</li> 
+    </ul>
+</div>
+<div>
+    <ul>
+    <b>Currency Pipe:</b>
+    <li>{{price | currency:'INR'}}</li>
+     <li>{{price | currency:'USD'}}</li>
+    </ul>
+</div>
+<div>
+    <ul>
+   <b>Json Pipe</b> 
+   <li>Object Format :
+    {{ emp | json}}</li>
+</ul>
+</div>
+<div>
+    <ul><b>Custom Pipe</b>
+        <li>Name:{{name}}</li>
+        <li>Name convert in Uppercase: {{name | count}}</li>
+        <li>Multiplication: 4*20</li>
+        <li>Result : {{num | mul}}</li>
+
+    </ul>
+</div>
+</div>

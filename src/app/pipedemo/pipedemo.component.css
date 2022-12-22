@@ -1,0 +1,17 @@
+.card{
+    width:500px; 
+    height: 490px;
+    border: 2px solid;
+    background-image: url(/assets/images/images.jpg);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 40px;
+}
+h4{
+    text-align: center;
+    color: white;
+}
+.card-header{
+    background-color: black;
+}

@@ -6,7 +6,7 @@ import { BehaviorSubject, Subject } from 'rxjs';
 })
 export class UtilityServiceService {
 //  userName = new Subject<any>();
-//  userName = new BehaviorSubject<any>('Angular  UI Developer')
+  userName = new BehaviorSubject<any>('Angular  UI Developer')
 product = new Subject<any>();
  
   constructor() { }

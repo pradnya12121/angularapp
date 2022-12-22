@@ -9,7 +9,7 @@ import { UtilityServiceService } from '../Services/utility-service.service';
 })
 export class Comp2Component implements OnInit {
 // userName;
-combine=[];
+// combine=[];
 product=[];
   constructor(private _utilityService:UtilityServiceService) {
 //     this._utilityService.userName.subscribe(res =>{
