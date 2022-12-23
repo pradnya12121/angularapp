@@ -1,0 +1,32 @@
+<p>gender-component works!</p>
+<div class="row justify-conetnt-center">
+    <div class="col-md-6">
+        <h4>Employee Details</h4>
+        <hr>
+<table class="table">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>Dept</th>
+            <th>Salary</th>
+            <th>Gender</th>
+            <th>DOB</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let emp of employee">
+            <td>{{emp.id}}</td>
+            <td>{{emp.name | genderpipe:emp.gender}}</td>
+            <td>{{emp.dept}}</td>
+            <td>{{emp.salary}}</td>
+            <td>{{emp.gender}}</td>
+            <td>{{emp.dob}}</td>
+        </tr>
+    </tbody>
+
+</table>
+
+    </div>
+
+</div>

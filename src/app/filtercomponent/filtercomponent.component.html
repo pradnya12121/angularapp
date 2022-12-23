@@ -1,0 +1,31 @@
+<p>filtercomponent works!</p>
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <input type="text" class="form-control" name="product" id="product" placeholder="enter product name" [(ngModel)]="nameSearch">
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>{{Sno}}</th>
+                        <th>{{Name}}</th>
+                        <th>{{Price}}</th>
+                        <th>{{Availability}}</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of product | filterPipe:nameSearch">
+                        <th>{{data.sno}}</th>
+                        <td>{{data.name}}</td>
+                        <td>{{data.price}}</td>
+                        <td>{{data.availability}}</td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -51,6 +51,10 @@ import { Comp1Component } from './comp1/comp1.component';
 import { PipedemoComponent } from './pipedemo/pipedemo.component';
 import { CountPipe } from './count.pipe';
 import { MulPipe } from './mul.pipe';
+import { FiltercomponentComponent } from './filtercomponent/filtercomponent.component';
+import { FilterPipePipe } from './filter-pipe.pipe';
+import { GenderComponentComponent } from './gender-component/gender-component.component';
+import { GenderpipePipe } from './genderpipe.pipe';
 
 
 @NgModule({
@@ -102,6 +106,10 @@ NewDirectiveAssignComponent,
    PipedemoComponent,
    CountPipe,
    MulPipe,
+   FiltercomponentComponent,
+   FilterPipePipe,
+   GenderComponentComponent,
+   GenderpipePipe,
   
     // ServerComponent
   ],
