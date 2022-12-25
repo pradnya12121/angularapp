@@ -55,6 +55,11 @@ import { FiltercomponentComponent } from './filtercomponent/filtercomponent.comp
 import { FilterPipePipe } from './filter-pipe.pipe';
 import { GenderComponentComponent } from './gender-component/gender-component.component';
 import { GenderpipePipe } from './genderpipe.pipe';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { HomeComponent } from './home/home.component';
+import { ProductComponent } from './product/product.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -110,6 +115,11 @@ NewDirectiveAssignComponent,
    FilterPipePipe,
    GenderComponentComponent,
    GenderpipePipe,
+   AboutusComponent,
+   HomeComponent,
+   ProductComponent,
+   ContactusComponent,
+   LoginComponent,
   
     // ServerComponent
   ],

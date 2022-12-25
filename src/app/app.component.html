@@ -128,10 +128,18 @@
     <app-service-component1></app-service-component1>
     <app-service-component2></app-service-component2>
     <app-reactive-approch></app-reactive-approch> -->
- <app-comp1></app-comp1>
+ <!-- <app-comp1></app-comp1>
  <app-comp2></app-comp2>
  <app-pipedemo></app-pipedemo>
  <!-- <app-comp3></app-comp3>
  <app-comp4></app-comp4> -->
- <app-filtercomponent></app-filtercomponent>
- <app-gender-component></app-gender-component>
+ <!-- <app-filtercomponent></app-filtercomponent>
+ <app-gender-component></app-gender-component> --> 
+
+ <ul  class="nav nav-tabs">
+  <li class="nav-item"><a  class="nav-link" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"  routerLink="home/">Home</a></li>
+  <li class="nav-item"><a class="nav-link" routerLink="aboutus/">Aboutus</a></li>
+  <li class="nav-item"><a class="nav-link" routerLink="product/">Product</a></li>
+  <li class="nav-item"><a class="nav-link"  routerLink="contactus/">Contactus</a></li>
+ </ul>
+ <router-outlet></router-outlet>
