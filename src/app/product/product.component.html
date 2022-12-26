@@ -1,1 +1,99 @@
 <p>product works!</p>
+
+<div class="row">
+    <div class="col-md-8 text-shadow rounded py-5">
+        <div class="main">
+        <div class="card">
+            <img class="card-img-top" src="/assets/images/laptop.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h2 class="card-title">Laptop &nbsp;{{price |currency:'INR'}}</h2>
+              <div class="card-text"><h5>Product Feature:</h5>
+               <ul>
+                <li>Intel Core i5 9th Gen</li>
+                <li>Quad Core, 2.4 GHz Clock Speed</li>
+                <li>8 GB RAM</li>
+                <li>512 GB SSD</li>
+                <li>4 GB NVIDIA Graphics Card</li>
+                <li>Windows 10 OS</li>
+                <li>1 Year Warranty</li>
+               </ul>
+            </div>
+              <a routerLink="laptop" class="btn btn-primary mt-2 box-shadow rounded py5">Visit</a>
+            </div>
+          </div>
+
+
+
+
+
+          <div class="card">
+            <img class="card-img-top" src="/assets/images/TV.webp" alt="Card image cap">
+            <div class="card-body">
+              <h2 class="card-title">Smart TV &nbsp;{{price2 |currency:'INR'}}</h2>
+              <div class="card-text"><h5>Product Feature:</h5>
+               <ul>
+                <li>User-Friendly Interface. You won't even think twice about speed</li>
+                <li>Video Streaming Services.</li>
+                <li>Streaming UHD Video in 4K.</li>
+                <li>Online music streaming</li>
+                <li>Media Player</li>
+                <li>A Universal Search Engine.</li>
+            
+               </ul>
+            </div>
+              <a routerLink="tv" class="btn btn-primary mt-2">Visit</a>
+            </div>
+          </div>
+
+
+
+          <div class="card" style="float:left">
+            <img class="card-img-top" src="/assets/images/tablet.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h2 class="card-title">Tablet &nbsp;{{price3 |currency:'INR'}}</h2>
+              <div class="card-text"><h5>Product Feature:</h5>
+               <ul>
+                <li>Fast Processing and great performance with MT8766WA Cortex A53, Quad Core Processor and 4 GB RAM</li>
+                <li>With this 25.65 cm (10.1 inch) Full HD Display, there's a lot more to see.</li>
+                <li>Exceptional Storage : It has 64GB of internal storage</li>
+                <li>4GB sim slot with calling and VoLTE</li>
+                <li>Watch movies, play games, learn online or click true to life pictures with Acer one tab</li>
+                
+                <li>1 Year Warranty</li>
+               </ul>
+            </div>
+              <a routerLink="tablet" class="btn btn-primary mt-2">Visit</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <img class="card-img-top" src="/assets/images/WashingMachine.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h2 class="card-title">Washing Machine &nbsp;{{price1 |currency:'INR'}}</h2>
+              <div class="card-text"><h5>Product Feature:</h5>
+               <ul>
+                <li>Fully-automatic front load washing machine</li>
+                <li>best wash quality, energy and water efficient</li>
+                <li>Capacity 9 kg: Suitable for large families</li>
+                <li>Energy Rating 5 Star: Best in class efficiency</li>
+                <li>Manufacturer Warranty: 2 years on product, 10 years on motor (T&C)</li>
+                <li>1400 RPM: higher spin speeds helps in faster drying</li>
+                <!-- <li>10 Wash Programs: Cotton, Cotton Large, Mix, Easy Care, Baby Care, Sports Wear, Delicate, Wool, Quick30, Rinse plus Spin</li> -->
+                <li>10 Year Warranty</li>
+               </ul>
+            </div>
+              <a routerLink="washingMachine" class="btn btn-primary mt-2">Visit</a>
+            </div>
+          </div>
+
+
+         <div class="main3">
+            &nbsp; &nbsp;<router-outlet></router-outlet>
+         </div>
+
+
+        </div>   
+
+    </div>
+
+</div>

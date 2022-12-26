@@ -1,0 +1,14 @@
+.card{
+    width: 70%;
+    height: 70%;
+    float: left;
+    position: relative;
+    bottom: 1500px;
+    margin-left:800px;
+}
+
+#hmain{
+    position: relative;
+    bottom: 50px;
+text-align: center;
+}

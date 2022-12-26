@@ -60,6 +60,11 @@ import { HomeComponent } from './home/home.component';
 import { ProductComponent } from './product/product.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { LoginComponent } from './login/login.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { LaptopComponent } from './product/laptop/laptop.component';
+import { TvComponent } from './product/tv/tv.component';
+import { TabletComponent } from './product/tablet/tablet.component';
+import { WashingMachineComponent } from './product/washing-machine/washing-machine.component';
 
 
 @NgModule({
@@ -120,6 +125,11 @@ NewDirectiveAssignComponent,
    ProductComponent,
    ContactusComponent,
    LoginComponent,
+   PageNotFoundComponent,
+   LaptopComponent,
+   TvComponent,
+   TabletComponent,
+   WashingMachineComponent,
   
     // ServerComponent
   ],
