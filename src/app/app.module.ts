@@ -65,6 +65,9 @@ import { LaptopComponent } from './product/laptop/laptop.component';
 import { TvComponent } from './product/tv/tv.component';
 import { TabletComponent } from './product/tablet/tablet.component';
 import { WashingMachineComponent } from './product/washing-machine/washing-machine.component';
+import { PracticeTemplateFormComponent } from './practice-template-form/practice-template-form.component';
+import { DemopostComponent } from './demopost/demopost.component';
+import { DemoDetailsComponent } from './demo-details/demo-details.component';
 
 
 @NgModule({
@@ -130,6 +133,9 @@ NewDirectiveAssignComponent,
    TvComponent,
    TabletComponent,
    WashingMachineComponent,
+   PracticeTemplateFormComponent,
+   DemopostComponent,
+   DemoDetailsComponent,
   
     // ServerComponent
   ],
