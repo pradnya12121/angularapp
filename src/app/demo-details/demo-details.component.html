@@ -8,3 +8,45 @@
     <li> <b>Body:</b>{{d.body}}</li>
 </ul>
 </div>
+
+
+
+
+
+<h3>Please click on the below button open popup</h3>
+<hr />
+<button
+  style="margin: 50px; padding: 10px"
+  type="button"
+  class="btn btn-primary"
+  (click)="openPopup()">Show Data
+</button>
+<div
+  class="modal"
+  tabindex="-1"
+  role="dialog"
+  [ngStyle]="{'display':displayStyle}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">User Details</h4>
+      </div>
+      <div class="modal-body">
+        <h5>The user Infromation </h5>
+<ul *ngFor="let d of array">
+    <li> <b>Userid</b> :{{d.userId}}</li>
+    <li><b>Id:</b> {{d.id}}</li>
+    <li><b>Title:</b>{{d.title}}</li>
+    <li> <b>Body:</b>{{d.body}}</li>
+</ul>
+  
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" 
+                (click)="closePopup()">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -12,6 +12,7 @@ export class DemoDetailsComponent implements OnInit {
 
   constructor(private demoservice2:Demoservice2Service, private route:ActivatedRoute  ) { }
  array=[];
+ displayStyle = "none";
   ngOnInit() {
      let id=this.route.snapshot.params['id']
    this.demoservice2.getPostsById(id).subscribe(result=>{
@@ -19,5 +20,12 @@ export class DemoDetailsComponent implements OnInit {
         this.array.push(result)
      })
   }
-
+  openPopup() {
+    this.displayStyle = "block";
+  }
+  closePopup() {
+    this.displayStyle = "none";
+  }
 }
+
+
