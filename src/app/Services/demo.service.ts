@@ -32,5 +32,7 @@ apiURL='https://jsonplaceholder.typicode.com/'
         let posts='posts'
         return this.http.get(this.apiURL + posts)
           }
+          
 }
+
 

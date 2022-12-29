@@ -1,0 +1,13 @@
+.card{
+    width: 30%;
+    /* sheight: 30%; */
+    min-height: 170px;
+    margin-left:0%;
+   margin-top:10px;
+   color: white;
+   background-color: black;
+
+}
+.card-body{
+    padding-top: 5px;
+}

@@ -17,7 +17,6 @@ import { NgswitchComponent } from './ngswitch/ngswitch.component';
 import { StructuralDirectivesComponent } from './structural-directives/structural-directives.component';
 import { NgSwitch2Component } from './ng-switch2/ng-switch2.component';
 import { AttriComponent } from './attri/attri.component';
-import { CustomDirDirective } from './custom-dir.directive';
 import { ConfirmpassComponent } from './confirmpass/confirmpass.component';
 import { ConfirmEqualValidatorDirective } from './passd.directive';
 import { ChildComponent } from './child/child.component';
@@ -57,17 +56,17 @@ import { GenderComponentComponent } from './gender-component/gender-component.co
 import { GenderpipePipe } from './genderpipe.pipe';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { HomeComponent } from './home/home.component';
-import { ProductComponent } from './product/product.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { LaptopComponent } from './product/laptop/laptop.component';
-import { TvComponent } from './product/tv/tv.component';
-import { TabletComponent } from './product/tablet/tablet.component';
-import { WashingMachineComponent } from './product/washing-machine/washing-machine.component';
-import { PracticeTemplateFormComponent } from './practice-template-form/practice-template-form.component';
+
 import { DemopostComponent } from './demopost/demopost.component';
 import { DemoDetailsComponent } from './demo-details/demo-details.component';
+import { ProductsModule } from './product/products.module';
+import { ElectronicModule } from './electronics/electronic.module';
+
+
+
 
 
 @NgModule({
@@ -86,7 +85,7 @@ import { DemoDetailsComponent } from './demo-details/demo-details.component';
     StructuralDirectivesComponent,
     NgSwitch2Component,
     AttriComponent,
-    CustomDirDirective,
+  
     ConfirmpassComponent,
    ConfirmEqualValidatorDirective,
   ChildComponent,
@@ -125,22 +124,23 @@ NewDirectiveAssignComponent,
    GenderpipePipe,
    AboutusComponent,
    HomeComponent,
-   ProductComponent,
+  
    ContactusComponent,
    LoginComponent,
    PageNotFoundComponent,
-   LaptopComponent,
-   TvComponent,
-   TabletComponent,
-   WashingMachineComponent,
-   PracticeTemplateFormComponent,
+  
    DemopostComponent,
    DemoDetailsComponent,
+   
   
     // ServerComponent
   ],
   imports: [
+
     BrowserModule,
+    ElectronicModule,
+    ProductsModule,
+
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
