@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
+import { CanComponentDeactivate } from 'src/app/candeacivateguard.guard';
 
 @Component({
   selector: 'app-reactive-approch',
   templateUrl: './reactive-approch.component.html',
   styleUrls: ['./reactive-approch.component.css']
 })
-export class ReactiveApprochComponent implements OnInit {
+export class ReactiveApprochComponent implements OnInit,CanComponentDeactivate {
   myForm:FormGroup
   nameNotAllowed=['Test']
   constructor() {
@@ -57,4 +58,11 @@ NName(control:FormControl) : Promise<any> | Observable<any>{
   onSubmit(){
     console.log(this.myForm.value)
   }
+  CanDeactivate(): Observable<boolean> |boolean{
+    if(this.myForm.dirty){
+      return confirm("You have unsave changes.Are you sure want to navigate?")
+    }
+    return true;
+  }
+  
 }

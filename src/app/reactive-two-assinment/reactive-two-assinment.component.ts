@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Observable } from 'rxjs';
+import { CanComponentDeactivate } from '../candeacivateguard.guard';
 import { userData } from '../models/templatedriven';
 
 @Component({
@@ -7,7 +9,7 @@ import { userData } from '../models/templatedriven';
   templateUrl: './reactive-two-assinment.component.html',
   styleUrls: ['./reactive-two-assinment.component.css']
 })
-export class ReactiveTwoAssinmentComponent implements OnInit {
+export class ReactiveTwoAssinmentComponent implements OnInit ,CanComponentDeactivate {
   myFormDetails:FormGroup;
 
  
@@ -76,5 +78,12 @@ this.userTwo.push(this.user);
 console.log(this.myFormDetails.value)
 
 
+  }
+
+  CanDeactivate(): Observable<boolean> |boolean{
+    if(this.myFormDetails.dirty){
+      return confirm("You have unsave changes.Are you sure want to navigate?")
+    }
+    return true;
   }
 }
