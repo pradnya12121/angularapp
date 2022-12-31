@@ -16,4 +16,7 @@ export class Demoservice2Service {
 getPostsById(id){
   return this.httpClient.get(`${divApiUrl}posts/`+ id )
 }
+deletePostById(id){
+  return this.httpClient.delete(`${divApiUrl}posts/`+ id)
+}
 }

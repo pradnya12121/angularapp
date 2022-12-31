@@ -65,6 +65,7 @@ import { DemoDetailsComponent } from './demo-details/demo-details.component';
 import { ProductsModule } from './product/products.module';
 import { ElectronicModule } from './electronics/electronic.module';
 import { AddUserComponent } from './add-user/add-user.component';
+import { RapidComponent } from './rapid/rapid.component';
 
 
 
@@ -133,6 +134,7 @@ NewDirectiveAssignComponent,
    DemopostComponent,
    DemoDetailsComponent,
    AddUserComponent,
+   RapidComponent,
    
   
     // ServerComponent

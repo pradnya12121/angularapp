@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Employee } from './models/employee';
 import { Product } from './models/product';
+import { Demoservice2Service } from './Services/demoservice2.service';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +19,7 @@ price:number;
   collegep:any[]=[];
 product:Product=new Product();
 isShow:boolean=true;
-  constructor(){
+  constructor(private demo2:Demoservice2Service){
     // this.employees.emp_id=101;
     // this.employees.emp_name="Pranisha Babar";
     // this.employees.emp_dept="Finance",
@@ -61,6 +62,11 @@ destroy(){
   this.isShow=false;
 }
 
+deleteData(){
+this.demo2.deletePostById(1).subscribe(result =>{
+  console.log(`data come from service` + result)
+})
+}
 
 
 }

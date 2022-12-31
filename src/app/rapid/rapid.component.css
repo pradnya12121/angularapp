@@ -1,0 +1,11 @@
+.table{
+    border: 2px solid black;
+    width: 800px;
+    height: 200px;
+    margin-left: 20px ;
+    background-color: gray;
+    
+}
+h5{
+    margin-left: 40px;
+}

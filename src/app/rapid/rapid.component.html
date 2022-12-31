@@ -1,0 +1,81 @@
+<p>rapid works!</p>
+<h5>Api Data:News</h5>
+<table class="table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Id</th>
+            <th>Card</th>
+            <th>Date</th>
+            <th>longURL</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        
+        <tr *ngFor="let data of array; index as i">
+             <td>{{i + 1}}</td>
+            <td>{{data.title}}</td>
+            
+             <td>{{data.id}}</td>
+            <td>{{data.card}}</td>
+            <td>{{data.date}}</td>
+            <td>{{data.longURL}}</td> 
+            
+        </tr>
+         
+    </tbody>
+</table>
+
+
+
+
+<h5>Api Data:Quote</h5>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Card</th>
+            <th>Country</th>
+            <th>Currency</th>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Region</th>
+            <th>ResourceId</th>
+            <th>ResourceSubtype</th>
+            <th>ResourceType</th>
+            <th>SecurityType</th>
+            <th>Symbol</th>
+            <th>Template</th>
+            <th>Ticker</th>
+            <th>TickerName</th>
+            <th>TinyName</th>
+            <th>Title</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <tr *ngFor="let info of array_one; index as i">
+             <td>{{i + 1}}</td>
+            <td>{{info.card}}</td>
+            
+             <td>{{info.country}}</td>
+            <td>{{info.currency}}</td>
+            <td>{{info.id}}</td>
+            <td>{{info.name}}</td> 
+            <td>{{info.region}}</td>
+            <td>{{info.resourceId}}</td>
+            <td>{{info.resourceSubtype}}</td>
+            <td>{{info.resourceType }}</td>
+            <td>{{info.securityType}}</td>
+            <td>{{info.symbol}}</td>
+            <td>{{info.template}}</td>
+            <td>{{info.ticker}}</td>
+            <td>{{info.tickerName}}</td>
+            <td>{{info.tinyName}}</td>
+            <td>{{info.title}}</td>
+            
+        </tr>
+         
+    </tbody>
+</table>
