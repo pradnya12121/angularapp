@@ -1,5 +1,6 @@
 import { JsonPipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { FirebaseService } from '../Services/firebase.service';
 import { RapidserviceService } from '../Services/rapidservice.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { RapidserviceService } from '../Services/rapidservice.service';
 })
 export class RapidComponent implements OnInit {
 
-  constructor(private rapid:RapidserviceService) { }
+  constructor(private rapid:RapidserviceService,private firebase:FirebaseService) { }
 array:any[]=[];
  array_one;
 // array_two;
@@ -20,15 +21,13 @@ array:any[]=[];
        this.array=result.news;
        this.array_one=result.quote
        console.log(this.array_one)
-      
-  
-    
-    
-    
-    
-  
-      
+      })
+  }
+  sendData(){
+    this.firebase.createPost().subscribe(result =>{
+      console.log(`data come from firebase`, result)
     })
+
   }
 
 }

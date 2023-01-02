@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { CanComponentDeactivate } from '../candeacivateguard.guard';
 import { userData } from '../models/templatedriven';
+import { FirebaseService } from '../Services/firebase.service';
 
 @Component({
   selector: 'app-reactive-two-assinment',
@@ -15,13 +16,18 @@ export class ReactiveTwoAssinmentComponent implements OnInit ,CanComponentDeacti
  
   // emailPattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-z]+$)";
   genders=[{id:'1',value:'Female'},{id:'2',value:'Male'}]
-  user;
+  user:userData;
   userTwo:any[]=[];
-  constructor() { 
+  constructor(private firebase:FirebaseService) { 
     this.createForm();
   }
-
+array=[];
   ngOnInit() {
+    this.firebase.getFireData().subscribe(result =>{
+      console.log(`data come from get method`+ result)
+      this.array=result;
+      console.log('data come from firebase' ,this.array)
+    })
   }
   createForm(){
    
@@ -76,6 +82,9 @@ this.user.password=this.myFormDetails.value.password;
 this.user.confirmPassword=this.myFormDetails.value.confirmPassword;
 this.userTwo.push(this.user);
 console.log(this.myFormDetails.value)
+this.firebase.createPostFirebase(this.user).subscribe(result=>{
+  console.log(`data come from table`, result)
+})
 
 
   }
