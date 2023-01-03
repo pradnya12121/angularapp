@@ -7,7 +7,8 @@ import { userData } from '../models/templatedriven';
   providedIn: 'root'
 })
 export class FirebaseService {
-
+user:any[]=[{id:1,name:'Jack'},
+{id:2,name:'Harry'},{id:3,name:'Potter'}]
   constructor(private httpClient:HttpClient) { }
   url = 'https://crud-operation-cdfec-default-rtdb.firebaseio.com/'
   createPost(): Observable <any>{

@@ -66,6 +66,8 @@ import { ProductsModule } from './product/products.module';
 import { ElectronicModule } from './electronics/electronic.module';
 import { AddUserComponent } from './add-user/add-user.component';
 import { RapidComponent } from './rapid/rapid.component';
+import { RegistrationComponent } from './registration/registration.component';
+import { RxjsconceptComponent } from './rxjsconcept/rxjsconcept.component';
 
 
 
@@ -135,6 +137,8 @@ NewDirectiveAssignComponent,
    DemoDetailsComponent,
    AddUserComponent,
    RapidComponent,
+   RegistrationComponent,
+   RxjsconceptComponent,
    
    
   

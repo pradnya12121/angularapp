@@ -1,10 +1,13 @@
+import { ResourceLoader } from '@angular/compiler';
+import { mapToMapExpression } from '@angular/compiler/src/render3/util';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { CanComponentDeactivate } from '../candeacivateguard.guard';
 import { userData } from '../models/templatedriven';
 import { FirebaseService } from '../Services/firebase.service';
-
+import {from} from 'rxjs';
+import { map } from 'rxjs/operators'
 @Component({
   selector: 'app-reactive-two-assinment',
   templateUrl: './reactive-two-assinment.component.html',
@@ -22,12 +25,44 @@ export class ReactiveTwoAssinmentComponent implements OnInit ,CanComponentDeacti
     this.createForm();
   }
 array=[];
+userInfo;
   ngOnInit() {
-    this.firebase.getFireData().subscribe(result =>{
-      console.log(`data come from get method`+ result)
-      this.array=result;
-      console.log('data come from firebase' ,this.array)
+    // ******from opreator is used to convert into observable..
+    //  this.userInfo = from(this.firebase.user)
+    // this.userInfo.subscribe(result =>{
+    //   console.log('data come from user...',result)
+    // })
+
+    console.log("=============data from map============")
+    this.firebase.getFireData().pipe(
+      map(restoreData =>{
+        for (const key in restoreData) {
+          //empty array
+          const array = [];
+        //for in loop
+        for (const key in restoreData) {
+          if (restoreData.hasOwnProperty(key)) {
+            array.push({...restoreData[key], id:key})
+            
+            
+          }
+        }
+        return array
+
+      
+      }
+
+      })
+    ).subscribe(res =>{
+      console.log('data from  map' ,res)
     })
+    
+    
+  //   this.firebase.getFireData()
+  // .subscribe(result =>{
+  //     console.log(`data come from get method`+ result)
+  //     this.array=result;
+  //    console.log('data come from firebase' ,this.array)   })
   }
   createForm(){
    

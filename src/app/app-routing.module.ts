@@ -16,6 +16,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 
 import { WashingMachineComponent } from './product/washing-machine/washing-machine.component';
 import { ReactiveTwoAssinmentComponent } from './reactive-two-assinment/reactive-two-assinment.component';
+import { RegistrationComponent } from './registration/registration.component';
+import { RxjsconceptComponent } from './rxjsconcept/rxjsconcept.component';
 import { ReactiveApprochComponent } from './Services/reactive-approch/reactive-approch.component';
 import { UnSaveGuard } from './un-save.guard';
 
@@ -33,6 +35,8 @@ const routes: Routes = [
 {path:'reactive-two',canDeactivate:[CandeacivateguardGuard],component:ReactiveTwoAssinmentComponent},
 {path:'product', canActivate:[AuthGuard] ,loadChildren:'./product/products.module#ProductsModule'},
 {path:'orderlist',loadChildren:'./order/order.module#OrderModule'},
+{path:'register' , component:RegistrationComponent},
+{path:'rxjsconcept', component:RxjsconceptComponent},
 
 
 {path:'**', component:PageNotFoundComponent},
