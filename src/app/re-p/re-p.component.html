@@ -1,0 +1,44 @@
+<p>re-p works!</p>
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" formControlName="username">
+                <div *ngIf="username?.invalid && username?.touched">
+                <div *ngIf="username.errors?.required" class="text-danger">Username is required</div>
+            </div>
+            </div>
+            <div class="form-group">
+               <label for="email">Email</label>
+               <input type="text" class="form-control" formControlName="email">
+               <div *ngIf="email?.invalid && email?.touched">
+                <div *ngIf="email.errors?.required">please enter email</div>
+               </div>
+            </div>
+            <div class="custom-control custom-radio"  *ngFor="let genders of array">
+                
+                <input type="radio" class="custom-control-input" formControlName="gender" value="{{genders.value}}" id="{{genders.id}}"> 
+                <label for="{{genders.id}}"> {{genders.value}}</label>
+                
+            
+
+            </div>
+            <div class="form-group">
+                <label for="course">Course</label>
+                <select class="form-control" formControlName="course">
+                    <option value="Angular"> Angular</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="C#">C#</option>
+
+
+                </select>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
