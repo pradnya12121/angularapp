@@ -26,4 +26,5 @@ user:any[]=[{id:1,name:'Jack'},
   getFireData():Observable<any>{
     return this.httpClient.get(this.url + 'post.json')
   }
+  
 }

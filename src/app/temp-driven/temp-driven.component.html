@@ -1,0 +1,49 @@
+<p>temp-driven works!</p>
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        
+            <form (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
+                <div class="form-group">
+            <label for="username">firstname</label>
+            <input type="text" class="form-control" id="username" #username="ngModel" name="username" required [(ngModel)]="username.username" placeholder="please enter firstname">
+            <div *ngIf="username.invalid && username.touched" class="text-danger">Username is reqiured</div>
+            <div *ngIf="username.username?.length >5" class="text-danger">Firstname contain only five character</div>
+            </div>
+
+            <div class=form-group>
+            <label for="lastname">Lastname</label>
+            <input type="text" class="form-control" id="lastname" #lastname="ngModel" name="lastname" required [(ngModel)]="lastname.lastname">
+            <div *ngIf="lastname.invalid && lastname.touched" class="text-danger"> Please enter lastname</div>
+            </div>
+            <div class="form-group">
+             <label for="email">Email</label>
+             <input type="email" class="form-control" id="email" #email="ngModel" name="email" required [(ngModel)]="email.email">
+             <div *ngIf="email.invalid && email.touched" class="text-danger">Email is required</div> 
+             
+            </div>
+            <div class="form-group">
+
+                <label for="password">Password</label>
+                <input type="password" class="form-control" #password="ngModel" id="password" name="password"  required [(ngModel)]="password.password">
+                <div *ngIf="password.invalid && password.touched" class="text-danger">Password is required</div>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">ConfirmPassword</label>
+                <input type="password" class="form-control" id="confirmPassword" name="confirmPassword"  #confirmPassword="ngModel" required [(ngModel)]="confirmPassword.confirmPassword">
+                <div *ngIf="password.invalid && password.touched"> ConfirmPAssword is required</div>
+                <div *ngIf="confirmPassword.confirmPassword !==password.password" class="text-danger">ConfirmPAssword and PAssword is mis Match</div>
+
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <div *ngIf="isShow">
+                <h2>{{student.username}}</h2>
+                <h2>{{student.lastname}}</h2>
+                <h2>{{student.email}}</h2>
+                <h2>{{student.password}}</h2>
+                <h2>{{student.confirmPassword}}</h2>
+
+            </div>
+        </form>
+    </div>
+
+</div>

@@ -68,6 +68,7 @@ import { AddUserComponent } from './add-user/add-user.component';
 import { RapidComponent } from './rapid/rapid.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { RxjsconceptComponent } from './rxjsconcept/rxjsconcept.component';
+import { TempDrivenComponent } from './temp-driven/temp-driven.component';
 
 
 
@@ -139,6 +140,7 @@ NewDirectiveAssignComponent,
    RapidComponent,
    RegistrationComponent,
    RxjsconceptComponent,
+   TempDrivenComponent,
    
    
   
