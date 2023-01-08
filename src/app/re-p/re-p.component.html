@@ -8,6 +8,9 @@
                 <input type="text" class="form-control" formControlName="username">
                 <div *ngIf="username?.invalid && username?.touched">
                 <div *ngIf="username.errors?.required" class="text-danger">Username is required</div>
+                <div *ngIf="username.errors?.maxlength" class="text-danger">Username not allowed more than 10 character</div>
+                <div *ngIf="username.errors?.nameNotAllowed">
+                   {{myForm.get('username').value}} not allowed</div>
             </div>
             </div>
             <div class="form-group">
@@ -15,6 +18,7 @@
                <input type="text" class="form-control" formControlName="email">
                <div *ngIf="email?.invalid && email?.touched">
                 <div *ngIf="email.errors?.required">please enter email</div>
+                <div *ngIf="email.errors?.emailNot">{{myForm.get('email').value}} Not allowed</div>
                </div>
             </div>
             <div class="custom-control custom-radio"  *ngFor="let genders of array">
@@ -22,9 +26,8 @@
                 <input type="radio" class="custom-control-input" formControlName="gender" value="{{genders.value}}" id="{{genders.id}}"> 
                 <label for="{{genders.id}}"> {{genders.value}}</label>
                 
-            
+        </div>
 
-            </div>
             <div class="form-group">
                 <label for="course">Course</label>
                 <select class="form-control" formControlName="course">
@@ -36,7 +39,38 @@
                 </select>
 
             </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" formControlName="password" class="form-control">
+                <div *ngIf="password?.invalid && password?.touched" >
+                    <div *ngIf="password.errors?.required">PAssword is required</div>
+                    <div>{{password.value}}</div>
+                </div>
+        
+                    
 
+               
+
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" formControlName="confirmPassword" class="form-control">
+                <div *ngIf="confirmpassword?.invalid && confirmPassword?.touched"> 
+                    <div *ngIf="confirmPAssword.errors?.required">PAssword is required</div>
+                    <div>{{confirmPAssword.value}}</div>>
+                <div *ngIf="password.value != confirmPassword.value"> PAssword miss match</div>
+                    
+            </div>
+            </div>
+            <div class="form-group" formArrayName="skills">
+                <label for="skill">Skills</label>
+            <ng-container *ngFor="let skill of myForm.get('skills').controls; index as i">
+
+                <input type="text" class="form-Control" formControlName="{{i}}" class="form-control">
+            </ng-container>
+        </div>
+        <button (click)="addSkills()" class="btn -btn-primary">Add skills</button>
+             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
 
     </div>
